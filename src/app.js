@@ -30,6 +30,7 @@ const expect = chai.expect
     })
     vm.$mount()
     const useElement = vm.$el.querySelector('use')
+    console.log(useElement)
     const href = useElement.getAttribute('xlink:href')
     expect(href).to.eq('#icon-settings')
     vm.$el.remove()
