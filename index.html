@@ -28,11 +28,19 @@
 </head>
 <body>
 <div id="app">
-    <g-button></g-button>
+    <g-button :loading="loading1"  @click="loading1 = !loading1">文字</g-button>
+    <g-button icon="down" :loading="true">文字</g-button>
+    <g-button icon="settings">文字</g-button>
+    <g-button icon="right">文字</g-button>
+    <g-button :loading="true" icon="left" icon-position="right">文字</g-button>
+    <g-button-group>
+        <g-button icon="left">上一页</g-button>
+        <g-button>更多</g-button>
+        <g-button icon="right" icon-position="right">下一页</g-button>
+    </g-button-group>
 </div>
-
-<script src="./node_modules/vue/dist/vue.min.js"></script>
 <script src="./src/app.js"></script>
-
+<script src="./node_modules/vue/dist/vue.min.js"></script>
+<script src="//at.alicdn.com/t/font_3153447_w0istfa8toc.js"></script>
 </body>
 </html>
