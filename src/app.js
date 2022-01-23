@@ -13,6 +13,11 @@ new Vue({
     el:'#app',
     data(){
         return {loading1:false}
+    },
+    methods:{
+        inputChange(e){
+            console.log(e.target.value)
+        }
     }
 })
 

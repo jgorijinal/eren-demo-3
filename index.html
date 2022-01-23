@@ -33,6 +33,7 @@
     <g-input :value="'张四'" disabled></g-input>
     <g-input :value="'张五'" readonly></g-input>
     <g-input :value="'张六'" error="名字不少于两个字"></g-input>
+    <g-input :value="'张六'" @change="inputChange"></g-input>
     <hr>
     <g-button :loading="loading1"  @click="loading1 = !loading1">文字</g-button>
     <g-button icon="down" :loading="true">文字</g-button>
