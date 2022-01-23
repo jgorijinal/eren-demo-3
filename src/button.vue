@@ -10,6 +10,7 @@
 <script>
 import Icon from './icon.vue'
 export default {
+  name:'guluButton',
   components:{
     'g-icon':Icon
   },
@@ -30,7 +31,7 @@ export default {
 
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .g-button {
   font-size: var(--font-size);height: var(--button-height);padding: 0 1em;border-radius: var(--border-radius);
   border: 1px solid var(--border-color);background: var(--button-bg);display:inline-flex;justify-content: center;
