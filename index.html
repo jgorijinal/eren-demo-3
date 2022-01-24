@@ -2,11 +2,13 @@
 <html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eren UI</title>
     <style>
         * {margin: 0; padding: 0; box-sizing: border-box;}
+
         :root {
             --button-height: 32px;
             --font-size: 14px;
@@ -17,9 +19,11 @@
             --border-color: #999;
             --border-color-hover: #666;
         }
+
         #app {
             margin: 20px;
         }
+
         body {
             font-size: var(--font-size);
         }
@@ -28,16 +32,32 @@
 </head>
 <body>
 <div id="app">
-    <div><g-input></g-input></div>
+    <g-row>
+        <g-col>1</g-col>
+        <g-col>2</g-col>
+    </g-row>
+    <g-row>
+        <g-col>1</g-col>
+        <g-col>2</g-col>
+        <g-col>3</g-col>
+    </g-row>
+    <g-row>
+        <g-col span="2">1</g-col>
+        <g-col span="22">2</g-col>
+    </g-row>
+    <hr>
+    <div>
+        <g-input></g-input>
+    </div>
     <g-input :value="'张三'"></g-input>
     <g-input :value="'张四'" disabled></g-input>
     <g-input :value="'张五'" readonly></g-input>
     <g-input :value="'张六'" error="名字不少于两个字"></g-input>
     <g-input :value="'张六'" @change="inputChange"></g-input>
     <g-input v-model="message"></g-input>
-    <p>{{message}}</p>
+    <p>{{ message }}</p>
     <hr>
-    <g-button :loading="loading1"  @click="loading1 = !loading1">文字</g-button>
+    <g-button :loading="loading1" @click="loading1 = !loading1">文字</g-button>
     <g-button icon="down" :loading="true">文字</g-button>
     <g-button icon="settings">文字</g-button>
     <g-button icon="right">文字</g-button>
