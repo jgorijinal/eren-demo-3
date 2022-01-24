@@ -28,23 +28,30 @@
             font-size: var(--font-size);
         }
     </style>
-
 </head>
 <body>
 <div id="app">
-    <g-row>
-        <g-col>1</g-col>
-        <g-col>2</g-col>
-    </g-row>
-    <g-row>
-        <g-col>1</g-col>
-        <g-col>2</g-col>
-        <g-col>3</g-col>
-    </g-row>
-    <g-row>
-        <g-col span="2">1</g-col>
-        <g-col span="22">2</g-col>
-    </g-row>
+        <g-row gutter="20">
+            <g-col>你好,我是一名前端工程师你好,我是一名前端工程师
+                你好,我是一名前端工程师你好,我是一名前端工程师
+                你好,我是一名前端工程师
+            </g-col>
+            <g-col>2</g-col>
+        </g-row>
+        <g-row gutter="200">
+            <g-col>1</g-col>
+            <g-col>2</g-col>
+            <g-col>3</g-col>
+        </g-row>
+        <g-row>
+            <g-col span="2">1</g-col>
+            <g-col span="22" >2</g-col>
+        </g-row>
+        <g-row gutter="20">
+            <g-col span="2">1</g-col>
+            <g-col span="8">2</g-col>
+            <g-col span="10" offset="4" >3</g-col>
+        </g-row>
     <hr>
     <div>
         <g-input></g-input>
