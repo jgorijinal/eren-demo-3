@@ -1,5 +1,5 @@
 <template>
-  <div class="row" :style="{marginLeft:-gutter/2+'px',marginRight:-gutter/2+'px'}">
+  <div class="row" :style="rowStyle">
     <slot></slot>
   </div>
 
@@ -12,9 +12,14 @@ props:{
     type:[String,Number]
   }
 },
-mounted() {  //!!!!!! 把 row的gutter 传到 col里面
+  computed:{
+  rowStyle(){
+    let gutter = this.gutter
+    return {marginLeft:-gutter/2+'px',marginRight:-gutter/2+'px'}
+  }
+  },
+mounted() {  //!!!!!! 用钩子函数把 row的gutter 传到 col里面
   this.$children.forEach(vm=>{
-    console.log(this.$children)
     vm.gutter = this.gutter
   })
 }
