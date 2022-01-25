@@ -50,9 +50,9 @@ export default {
       return [
           ...createClasses({span,offset}),
         ... createClasses(ipad,'ipad-'),
-        ... createClasses(ipad,'narrow-pc-'),
-        ... createClasses(ipad,'pc-'),
-        ... createClasses(ipad,'wide-pc-'),
+        ... createClasses(narrowPc,'narrow-pc-'),
+        ... createClasses(pc,'pc-'),
+        ... createClasses(widePc,'wide-pc-'),
 
       ]
     },
