@@ -8,7 +8,9 @@
     <title>Eren UI</title>
     <style>
         * {margin: 0; padding: 0; box-sizing: border-box;}
+
         img {max-width: 100%;}
+
         :root {
             --button-height: 32px;
             --font-size: 14px;
@@ -30,21 +32,36 @@
     </style>
 </head>
 <body>
-
+<style>
+    .demo{
+        border: 1px solid black;
+        min-height: 100px;
+    }
+</style>
 <div id="app">
-        <g-row >
-            <g-col span="2" :pc="{span:4}">1</g-col>
-            <g-col span="22" :pc="{span:16,offset:4}">2</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="2" class="demo" >1</g-col>
-            <g-col span="22" class="demo">2</g-col>
-        </g-row>
-        <g-row >
-            <g-col span="2" class="demo">1</g-col>
-            <g-col span="8" class="demo">2</g-col>
-            <g-col span="10" class="demo" offset="4" >3</g-col>
-        </g-row>
+    <g-layout style="height: 100vh">
+        <g-sider class="demo">header</g-sider>
+        <g-layout>
+            <g-header class="demo">sider</g-header>
+            <g-content class="demo">content</g-content>
+            <g-footer class="demo">footer</g-footer>
+        </g-layout>
+    </g-layout>
+
+    <hr>
+    <g-row>
+        <g-col span="2" :pc="{span:4}">1</g-col>
+        <g-col span="22" :pc="{span:16,offset:4}">2</g-col>
+    </g-row>
+    <g-row>
+        <g-col span="2" >1</g-col>
+        <g-col span="22" >2</g-col>
+    </g-row>
+    <g-row>
+        <g-col span="2" >1</g-col>
+        <g-col span="8" >2</g-col>
+        <g-col span="10"  offset="4">3</g-col>
+    </g-row>
     <hr>
     <div>
         <g-input></g-input>
