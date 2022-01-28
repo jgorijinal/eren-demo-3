@@ -50,7 +50,7 @@ new Vue({
                 },
                 autoClose:false,
                 enableHtml: true,
-                position:'middle'
+                position:'bottom'
             })
         }
     },
