@@ -48,9 +48,11 @@ new Vue({
                         console.log('用户知道了')
                     }
                 },
-                enableHtml: true
+                autoClose:false,
+                enableHtml: true,
+                position:'middle'
             })
         }
-    }
+    },
 })
 
