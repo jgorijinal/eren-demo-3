@@ -47,14 +47,14 @@
     }
 </style>
 <div id="app">
-    <g-tabs :selected="selectedTab" @update:selected="selectedTab = $event">  <!--<g-tabs :selected.sync="selectedTab" > -->
+    <g-tabs :selected="selectedTab" @update:selected="selectedTab = $event" direction="horizontal">  <!--<g-tabs :selected.sync="selectedTab" > -->
         <g-tabs-head>
             <g-tabs-item name="woman">
                 <g-icon name="settings"></g-icon>
-                美女相关
+                美女
             </g-tabs-item>
-            <g-tabs-item name="finance" disabled>财经相关</g-tabs-item>
-            <g-tabs-item name="sports">体育相关</g-tabs-item>
+            <g-tabs-item name="finance" disabled>财经</g-tabs-item>
+            <g-tabs-item name="sports">体育</g-tabs-item>
             <template v-slot:actions>
             <g-button>Extra actions</g-button>
             </template>

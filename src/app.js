@@ -44,7 +44,7 @@ new Vue({
         return {
             loading1: false,
             message: 'hi',
-            selectedTab:'horizontal'
+            selectedTab:'sports'
         }
     },
     methods: {
