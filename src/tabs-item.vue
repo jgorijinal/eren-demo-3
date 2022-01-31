@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-item"  :disabled="disabled" @click="xxx" :class="classes">
+  <div class="tabs-item"  :disabled="disabled" @click="onClick" :class="classes">
     <slot></slot>
   </div>
 </template>
@@ -36,7 +36,10 @@ export default {
   })
   },
   methods:{
-    xxx(){
+    onClick(){
+      if(this.disabled){
+        return
+      }
       this.eventBus.$emit('update:selected',this.name,this)
     }
   }
@@ -58,7 +61,7 @@ export default {
   }
   &[disabled]{
     color: #bbb;
-    pointer-events: none;
+    cursor:not-allowed;
   }
 }
 </style>
