@@ -32,7 +32,17 @@ export default {
     }
   },
  mounted(){
-    this.eventBus.$emit('update:selected',this.selected)
+   this.$children.forEach(vm=>{
+     if(vm.$options.name === 'GuluTabsHead'){
+       console.log(vm.$options.name)
+       vm.$children.forEach(item=>{
+         if(item.$options.name === 'GuluTabsItem' && item.$props.name === this.selected ){
+           this.eventBus.$emit('update:selected',this.selected , item)
+         }
+       })
+     }
+   })
+
  }
 }
 </script>

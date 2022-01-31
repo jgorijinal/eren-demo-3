@@ -1,6 +1,7 @@
 <template>
   <div class="tabs-head" >
     <slot></slot>
+    <div class="line" ref="line"></div>
     <div class="actions-wrapper"></div>
     <slot name="actions"></slot>
   </div>
@@ -12,6 +13,9 @@ export default {
   },
   inject:['eventBus'],
   created(){
+     this.eventBus.$on('update:selected',(name,vm)=>{
+
+     })
   }
 }
 </script>
@@ -23,8 +27,15 @@ $tap-height:40px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
   .actions-wrapper{
     margin-left: auto;
+  }
+  .line{
+    width: 100px;
+    border-bottom:2px solid #1890ff ;
+    position: absolute;
+    bottom: 0;
   }
 }
 </style>
