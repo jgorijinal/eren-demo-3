@@ -12,9 +12,11 @@ export default {
   props:{
   },
   inject:['eventBus'],
-  created(){
+  mounted(){
      this.eventBus.$on('update:selected',(name,vm)=>{
-
+       console.log(vm.$el.getBoundingClientRect())
+      this.$refs.line.style.width = vm.$el.getBoundingClientRect().width+'px'
+       this.$refs.line.style.left = vm.$el.getBoundingClientRect().left + 'px'
      })
   }
 }
@@ -22,20 +24,20 @@ export default {
 <style lang="scss" scoped>
 $tap-height:40px;
 .tabs-head {
-  border: 1px solid red;
   height:$tap-height;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  border-bottom:1px solid #ebedf0 ;
   .actions-wrapper{
     margin-left: auto;
   }
   .line{
-    width: 100px;
     border-bottom:2px solid #1890ff ;
     position: absolute;
     bottom: 0;
+    transition: all 250ms;
   }
 }
 </style>

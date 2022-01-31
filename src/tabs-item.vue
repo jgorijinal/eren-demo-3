@@ -47,7 +47,6 @@ export default {
   flex-shrink:0;
   padding: 0 1em;
   height:100%;
-  border:1px solid blue;
   display: flex;
   align-items: center;
   cursor: pointer;
