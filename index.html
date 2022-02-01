@@ -42,81 +42,88 @@
         background: #bbbbbb;
     }
 </style>
+<div style="border: 5px solid blue ;height: 2000px;"></div>
 <div id="app" style="padding-left: 100px;padding-top: 100px;">
     <g-popover >
-        <template v-slot="content">
-            content
+        <template v-slot:content>
+            popover的content内容
         </template>
         <button>点我</button>
     </g-popover>
 
-    <hr>
-    <g-tabs :selected="selectedTab" @update:selected="selectedTab = $event" direction="horizontal">  <!--<g-tabs :selected.sync="selectedTab" > -->
-        <g-tabs-head>
-            <g-tabs-item name="woman" disabled>
-                <g-icon name="settings"></g-icon>
-                美女
-            </g-tabs-item>
-            <g-tabs-item name="finance">财经</g-tabs-item>
-            <g-tabs-item name="sports">体育</g-tabs-item>
-            <template v-slot:actions>
-            <g-button>Extra actions</g-button>
-            </template>
-        </g-tabs-head>
-        <g-tabs-body>
-            <g-tabs-pane name="woman">美女相关</g-tabs-pane>
-            <g-tabs-pane name="finance">财经相关</g-tabs-pane>
-            <g-tabs-pane name="sports">体育相关</g-tabs-pane>
-        </g-tabs-body>
-    </g-tabs>
-    <hr>
-    <button @click="toast123">hello</button>
-    <hr>
-    <g-layout style="height: 100vh">
-        <g-sider>sider</g-sider>
-        <g-layout>
-            <g-header>header</g-header>
-            <g-content >content</g-content>
-            <g-footer>footer</g-footer>
-        </g-layout>
-    </g-layout>
+    <g-popover >
+        <template v-slot:content>
+            popover的content内容
+        </template>
+        <button>点我</button>
+    </g-popover>
+<!--    <hr>-->
+<!--    <g-tabs :selected="selectedTab" @update:selected="selectedTab = $event" direction="horizontal">  &lt;!&ndash;<g-tabs :selected.sync="selectedTab" > &ndash;&gt;-->
+<!--        <g-tabs-head>-->
+<!--            <g-tabs-item name="woman" disabled>-->
+<!--                <g-icon name="settings"></g-icon>-->
+<!--                美女-->
+<!--            </g-tabs-item>-->
+<!--            <g-tabs-item name="finance">财经</g-tabs-item>-->
+<!--            <g-tabs-item name="sports">体育</g-tabs-item>-->
+<!--            <template v-slot:actions>-->
+<!--            <g-button>Extra actions</g-button>-->
+<!--            </template>-->
+<!--        </g-tabs-head>-->
+<!--        <g-tabs-body>-->
+<!--            <g-tabs-pane name="woman">美女相关</g-tabs-pane>-->
+<!--            <g-tabs-pane name="finance">财经相关</g-tabs-pane>-->
+<!--            <g-tabs-pane name="sports">体育相关</g-tabs-pane>-->
+<!--        </g-tabs-body>-->
+<!--    </g-tabs>-->
+<!--    <hr>-->
+<!--    <button @click="toast123">hello</button>-->
+<!--    <hr>-->
+<!--    <g-layout style="height: 100vh">-->
+<!--        <g-sider>sider</g-sider>-->
+<!--        <g-layout>-->
+<!--            <g-header>header</g-header>-->
+<!--            <g-content >content</g-content>-->
+<!--            <g-footer>footer</g-footer>-->
+<!--        </g-layout>-->
+<!--    </g-layout>-->
 
-    <hr>
-    <g-row>
-        <g-col span="2" :pc="{span:4}">1</g-col>
-        <g-col span="22" :pc="{span:16,offset:4}">2</g-col>
-    </g-row>
-    <g-row>
-        <g-col span="2" >1</g-col>
-        <g-col span="22" >2</g-col>
-    </g-row>
-    <g-row>
-        <g-col span="2" >1</g-col>
-        <g-col span="8" >2</g-col>
-        <g-col span="10"  offset="4">3</g-col>
-    </g-row>
-    <hr>
-    <div>
-        <g-input></g-input>
-    </div>
-    <g-input :value="'张三'"></g-input>
-    <g-input :value="'张四'" disabled></g-input>
-    <g-input :value="'张五'" readonly></g-input>
-    <g-input :value="'张六'" error="名字不少于两个字"></g-input>
-    <g-input :value="'张六'" @change="inputChange"></g-input>
-    <g-input v-model="message"></g-input>
-    <p>{{ message }}</p>
-    <hr>
-    <g-button :loading="loading1" @click="loading1 = !loading1">文字</g-button>
-    <g-button icon="down" :loading="true">文字</g-button>
-    <g-button icon="settings">文字</g-button>
-    <g-button icon="right">文字</g-button>
-    <g-button :loading="true" icon="left" icon-position="right">文字</g-button>
-    <g-button-group>
-        <g-button icon="left">后退</g-button>
-        <g-button>更多</g-button>
-        <g-button icon="right" icon-position="right">前进</g-button>
-    </g-button-group>
+<!--    <hr>-->
+<!--    <g-row>-->
+<!--        <g-col span="2" :pc="{span:4}">1</g-col>-->
+<!--        <g-col span="22" :pc="{span:16,offset:4}">2</g-col>-->
+<!--    </g-row>-->
+<!--    <g-row>-->
+<!--        <g-col span="2" >1</g-col>-->
+<!--        <g-col span="22" >2</g-col>-->
+<!--    </g-row>-->
+<!--    <g-row>-->
+<!--        <g-col span="2" >1</g-col>-->
+<!--        <g-col span="8" >2</g-col>-->
+<!--        <g-col span="10"  offset="4">3</g-col>-->
+<!--    </g-row>-->
+<!--    <hr>-->
+<!--    <div>-->
+<!--        <g-input></g-input>-->
+<!--    </div>-->
+<!--    <g-input :value="'张三'"></g-input>-->
+<!--    <g-input :value="'张四'" disabled></g-input>-->
+<!--    <g-input :value="'张五'" readonly></g-input>-->
+<!--    <g-input :value="'张六'" error="名字不少于两个字"></g-input>-->
+<!--    <g-input :value="'张六'" @change="inputChange"></g-input>-->
+<!--    <g-input v-model="message"></g-input>-->
+<!--    <p>{{ message }}</p>-->
+<!--    <hr>-->
+<!--    <g-button :loading="loading1" @click="loading1 = !loading1">文字</g-button>-->
+<!--    <g-button icon="down" :loading="true">文字</g-button>-->
+<!--    <g-button icon="settings">文字</g-button>-->
+<!--    <g-button icon="right">文字</g-button>-->
+<!--    <g-button :loading="true" icon="left" icon-position="right">文字</g-button>-->
+<!--    <g-button-group>-->
+<!--        <g-button icon="left">后退</g-button>-->
+<!--        <g-button>更多</g-button>-->
+<!--        <g-button icon="right" icon-position="right">前进</g-button>-->
+<!--    </g-button-group>-->
 </div>
 <script src="./src/app.js"></script>
 <script src="./node_modules/vue/dist/vue.min.js"></script>
