@@ -42,7 +42,15 @@
         background: #bbbbbb;
     }
 </style>
-<div id="app">
+<div id="app" style="padding-left: 100px;padding-top: 100px;">
+    <g-popover >
+        <template v-slot="content">
+            content
+        </template>
+        <button>点我</button>
+    </g-popover>
+
+    <hr>
     <g-tabs :selected="selectedTab" @update:selected="selectedTab = $event" direction="horizontal">  <!--<g-tabs :selected.sync="selectedTab" > -->
         <g-tabs-head>
             <g-tabs-item name="woman" disabled>
