@@ -6,33 +6,50 @@
 
 <script>
 import Vue from 'vue'
+
 export default {
   name: "GuluCollapse",
-  props:{
-    selected:{
-      type:String,
-      required:true
+  props: {
+    selected: {
+      type: Array,
+      required: true
     },
-    single:{
-      type:Boolean,
-      default:false
+    single: {
+      type: Boolean,
+      default: false
     }
   },
-  data(){
+  data() {
     return {
-      eventBus:new Vue()
+      eventBus: new Vue()
     }
   },
-  provide(){
-    if(this.single === false)
+  provide() {
     return {
-      eventBus:this.eventBus
+      eventBus: this.eventBus
     }
   },
-  mounted(){
+  mounted() {
+    this.eventBus.$emit('update:selected', this.selected)
 
-  }
-
+    this.eventBus.$on('update:addSelected', (name) => {
+      let selectedCopy = JSON.parse(JSON.stringify(this.selected))
+      if (this.single) {
+        selectedCopy = [name]
+      } else {
+        selectedCopy.push(name)
+      }
+      this.eventBus.$emit('update:selected', selectedCopy)
+      this.$emit('update:selected', selectedCopy)
+    })
+    this.eventBus.$on('update:removeSelected', (name) => {
+      let selectedCopy = JSON.parse(JSON.stringify(this.selected))
+      let index = selectedCopy.indexOf(name)
+      selectedCopy.splice(index, 1)
+      this.eventBus.$emit('update:selected', selectedCopy)
+      this.$emit('update:selected', selectedCopy)
+    })
+}
 }
 </script>
 

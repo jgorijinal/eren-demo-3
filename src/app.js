@@ -51,7 +51,7 @@ new Vue({
             loading1: false,
             message: 'hi',
             selectedTab:'sports',
-            selectedCollapse:'标题1'
+            selectedName: ['2','1']
 
         }
     },

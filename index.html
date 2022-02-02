@@ -45,10 +45,10 @@
     }
 </style>
 <div id="app" style="padding-left: 150px;padding-top: 80px;">
-    <g-collapse :selected="selectedCollapse" @update:selected="selectedCollapse = $event" single>
-        <g-collapse-item title="标题一">content 1</g-collapse-item>
-        <g-collapse-item title="标题一">content 2</g-collapse-item>
-        <g-collapse-item title="标题一">content 3</g-collapse-item>
+    <g-collapse :selected="selectedName" @update:selected = "selectedName = $event" >
+        <g-collapse-item title="标题一" name="1">content 1</g-collapse-item>
+        <g-collapse-item title="标题二" name="2">content 2</g-collapse-item>
+        <g-collapse-item title="标题三" name="3" >content 3</g-collapse-item>
     </g-collapse>
 
 <!--    <g-popover position="right" trigger="click">-->
