@@ -45,7 +45,7 @@
     }
 </style>
 <div id="app" style="padding-left: 150px;padding-top: 80px;">
-    <g-collapse>
+    <g-collapse :selected="selectedCollapse" @update:selected="selectedCollapse = $event" single>
         <g-collapse-item title="标题一">content 1</g-collapse-item>
         <g-collapse-item title="标题一">content 2</g-collapse-item>
         <g-collapse-item title="标题一">content 3</g-collapse-item>

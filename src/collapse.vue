@@ -5,8 +5,34 @@
 </template>
 
 <script>
+import Vue from 'vue'
 export default {
   name: "GuluCollapse",
+  props:{
+    selected:{
+      type:String,
+      required:true
+    },
+    single:{
+      type:Boolean,
+      default:false
+    }
+  },
+  data(){
+    return {
+      eventBus:new Vue()
+    }
+  },
+  provide(){
+    if(this.single === false)
+    return {
+      eventBus:this.eventBus
+    }
+  },
+  mounted(){
+
+  }
+
 }
 </script>
 

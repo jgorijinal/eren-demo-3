@@ -50,7 +50,9 @@ new Vue({
         return {
             loading1: false,
             message: 'hi',
-            selectedTab:'sports'
+            selectedTab:'sports',
+            selectedCollapse:'标题1'
+
         }
     },
     methods: {
