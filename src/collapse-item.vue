@@ -67,7 +67,7 @@ export default {
     display: flex;
     align-items: center;
     padding: 10px 12px;
-    border: 1px solid #999999;
+    border: 1px solid #d9d9d9;
     margin-top: -1px;
     margin-left: -1px;
     margin-right: -1px;
@@ -107,7 +107,7 @@ export default {
     > .content {
       border-bottom-left-radius: 4px;
       border-bottom-right-radius: 4px;
-
+      margin-bottom:-1px;
     }
   }
 
@@ -116,9 +116,9 @@ export default {
     margin-right: -1px;
     margin-top: -1px;
     padding: 12px;
-    border: 1px solid #999999;
+    border: 1px solid ;
+    border: 1px solid #d9d9d9;
     border-top: none;
-    border-bottom: none;
     animation: appear 250ms ease-out forwards;
   }
 
