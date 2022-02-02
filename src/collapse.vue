@@ -49,7 +49,7 @@ export default {
       this.eventBus.$emit('update:selected', selectedCopy)
       this.$emit('update:selected', selectedCopy)
     })
-}
+  }
 }
 </script>
 
@@ -57,7 +57,7 @@ export default {
 .collapse {
   border: 1px solid #999999;
   border-radius: 4px;
-  border-left-color:transparent ;
-  border-right-color:transparent ;
+  border-left-color: transparent;
+  border-right-color: transparent;
 }
 </style>
