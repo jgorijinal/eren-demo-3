@@ -57,5 +57,7 @@ export default {
 .collapse {
   border: 1px solid #999999;
   border-radius: 4px;
+  border-left-color:transparent ;
+  border-right-color:transparent ;
 }
 </style>
