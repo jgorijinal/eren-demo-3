@@ -74,11 +74,11 @@ export default {
 
     .icon {
       margin-right: 12px;
-      animation: rotateBack 500ms ease-out forwards
+      animation: rotateBack 250ms ease-out forwards
     }
 
     .icon.active {
-      animation: rotate 500ms ease-out forwards
+      animation: rotate 250ms ease-out forwards
     }
 
     .title {

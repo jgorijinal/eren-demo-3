@@ -138,7 +138,7 @@ $border-radius: 4px;
 }
 
 .content-wrapper {
-  animation: fade 500ms;
+  animation: fade 500ms ;
   max-width: 20em;
   border: 1px solid #999;
   border-radius: $border-radius;

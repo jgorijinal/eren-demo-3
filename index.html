@@ -11,19 +11,8 @@
 
         img {max-width: 100%;}
 
-        :root {
-            --button-height: 32px;
-            --font-size: 14px;
-            --button-bg: white;
-            --button-active-bg: #eee;
-            --border-radius: 4px;
-            --color: #333;
-            --border-color: #999;
-            --border-color-hover: #666;
-        }
-
         body {
-            font-size: var(--font-size);
+            font-size: 14px;
         }
     </style>
 </head>
@@ -44,18 +33,18 @@
         background: #bbbbbb;
     }
 </style>
-<div id="app" style="padding-left: 150px;padding-top: 80px;">
-    <g-collapse :selected="selectedName" @update:selected = "selectedName = $event" >
-        <g-collapse-item title="Title1" name="1" disabled>Content 1</g-collapse-item>
-        <g-collapse-item title="Title2" name="2">Content2</g-collapse-item>
-        <g-collapse-item title="Title3" name="3" >Content3</g-collapse-item>
-        <g-collapse-item title="Title4" name="4" >Content 4</g-collapse-item>
-        <g-collapse-item title="Title5" name="5" >Content 5</g-collapse-item>
-        <g-collapse-item title="Title6" name="6" >Content 6</g-collapse-item>
-        <g-collapse-item title="Title7" name="7" >
-            <g-collapse-item title="Title8" name="8" >Content 7</g-collapse-item>
-        </g-collapse-item>
-    </g-collapse>
+<div id="app">
+<!--    <g-collapse :selected="selectedName" @update:selected = "selectedName = $event" >-->
+<!--        <g-collapse-item title="Title1" name="1" disabled>Content 1</g-collapse-item>-->
+<!--        <g-collapse-item title="Title2" name="2">Content2</g-collapse-item>-->
+<!--        <g-collapse-item title="Title3" name="3" >Content3</g-collapse-item>-->
+<!--        <g-collapse-item title="Title4" name="4" >Content 4</g-collapse-item>-->
+<!--        <g-collapse-item title="Title5" name="5" >Content 5</g-collapse-item>-->
+<!--        <g-collapse-item title="Title6" name="6" >Content 6</g-collapse-item>-->
+<!--        <g-collapse-item title="Title7" name="7" >-->
+<!--            <g-collapse-item title="Title8" name="8" >Content 7</g-collapse-item>-->
+<!--        </g-collapse-item>-->
+<!--    </g-collapse>-->
 
 <!--    <g-popover position="right" trigger="click">-->
 <!--        <template v-slot:content>-->
@@ -140,16 +129,16 @@
     <!--    <g-input v-model="message"></g-input>-->
     <!--    <p>{{ message }}</p>-->
     <!--    <hr>-->
-    <!--    <g-button :loading="loading1" @click="loading1 = !loading1">文字</g-button>-->
-    <!--    <g-button icon="down" :loading="true">文字</g-button>-->
-    <!--    <g-button icon="settings">文字</g-button>-->
-    <!--    <g-button icon="right">文字</g-button>-->
-    <!--    <g-button :loading="true" icon="left" icon-position="right">文字</g-button>-->
-    <!--    <g-button-group>-->
-    <!--        <g-button icon="left">后退</g-button>-->
-    <!--        <g-button>更多</g-button>-->
-    <!--        <g-button icon="right" icon-position="right">前进</g-button>-->
-    <!--    </g-button-group>-->
+        <g-button :loading="loading1" @click="loading1 = !loading1">文字</g-button>
+        <g-button icon="down" :loading="true">文字</g-button>
+        <g-button icon="settings">文字</g-button>
+        <g-button icon="right">文字</g-button>
+        <g-button :loading="true" icon="left" icon-position="right">文字</g-button>
+        <g-button-group>
+            <g-button icon="left">后退</g-button>
+            <g-button>更多</g-button>
+            <g-button icon="right" icon-position="right">前进</g-button>
+        </g-button-group>
 </div>
 <script src="./src/app.js"></script>
 <script src="./node_modules/vue/dist/vue.min.js"></script>
