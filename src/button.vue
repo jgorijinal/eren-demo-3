@@ -1,6 +1,6 @@
 <template>
   <button class="g-button" :class="classes" @click="$emit('click',!loading)" :disabled="disabled" :circle="circle">
-    <g-icon v-if="loading " class="loading" name="loading"></g-icon>
+    <g-icon v-if="loading" class="loading" name="loading"></g-icon>
     <g-icon v-if="icon && !loading" class="icon" :name="icon"></g-icon>
     <span class="content" v-if="hasContent">
       <slot/>
@@ -129,6 +129,9 @@ $border-color-hover: #666;
   }
   &.noIcon{
     > .content {margin-left: 0;}
+    .loading{
+        margin-right: 0.4em;
+      }
   }
   @keyframes spin {
     0% {transform: rotate(0)}

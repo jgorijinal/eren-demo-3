@@ -32,9 +32,30 @@
         min-height: 100px;
         background: #bbbbbb;
     }
+    .g-button {
+        margin-right: 1em;
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        font-size: 14px;
+        margin-bottom: 45px;
+        line-height: 1.5em;
+    }
+    th {
+        display: table-cell;
+        vertical-align: inherit;
+        font-weight: bold;
+        text-align: center;
+    }
+    td{
+        border-bottom: 1px solid rgb(220, 223, 230);
+        padding: 15px;
+        max-width: 250px;
+    }
 </style>
 <div id="app" style="padding:100px;">
-
 <!--    <g-demo>-->
 <!--        <template v-slot:title>基础用法</template>-->
 <!--        <template v-slot:description>-->
@@ -85,24 +106,24 @@
 <!--    </g-popover>-->
 
     <!--    <hr>-->
-    <!--    <g-tabs :selected="selectedTab" @update:selected="selectedTab = $event" direction="horizontal">  &lt;!&ndash;<g-tabs :selected.sync="selectedTab" > &ndash;&gt;-->
-    <!--        <g-tabs-head>-->
-    <!--            <g-tabs-item name="woman" disabled>-->
-    <!--                <g-icon name="settings"></g-icon>-->
-    <!--                美女-->
-    <!--            </g-tabs-item>-->
-    <!--            <g-tabs-item name="finance">财经</g-tabs-item>-->
-    <!--            <g-tabs-item name="sports">体育</g-tabs-item>-->
-    <!--            <template v-slot:actions>-->
-    <!--            <g-button>Extra actions</g-button>-->
-    <!--            </template>-->
-    <!--        </g-tabs-head>-->
-    <!--        <g-tabs-body>-->
-    <!--            <g-tabs-pane name="woman">美女相关</g-tabs-pane>-->
-    <!--            <g-tabs-pane name="finance">财经相关</g-tabs-pane>-->
-    <!--            <g-tabs-pane name="sports">体育相关</g-tabs-pane>-->
-    <!--        </g-tabs-body>-->
-    <!--    </g-tabs>-->
+        <g-tabs :selected.sync="selectedTab" direction="horizontal">  <!--<g-tabs :selected.sync="selectedTab" > -->
+            <g-tabs-head>
+                <g-tabs-item name="woman" disabled>
+                    <g-icon name="settings"></g-icon>
+                    美女
+                </g-tabs-item>
+                <g-tabs-item name="finance">财经</g-tabs-item>
+                <g-tabs-item name="sports">体育</g-tabs-item>
+                <template v-slot:actions>
+                <g-button>Extra actions</g-button>
+                </template>
+            </g-tabs-head>
+            <g-tabs-body>
+                <g-tabs-pane name="woman">美女相关</g-tabs-pane>
+                <g-tabs-pane name="finance">财经相关</g-tabs-pane>
+                <g-tabs-pane name="sports">体育相关</g-tabs-pane>
+            </g-tabs-body>
+        </g-tabs>
     <!--    <hr>-->
     <!--    <button @click="toast123">hello</button>-->
     <!--    <hr>-->
@@ -141,8 +162,8 @@
     <!--    <g-input v-model="message"></g-input>-->
     <!--    <p>{{ message }}</p>-->
     <!--    <hr>-->
-<!--        <g-button :loading="loading1" @click="loading1 = !loading1">文字</g-button>-->
-<!--        <g-button icon="down" :loading="true" type="primary" disabled>文字</g-button>-->
+<!--            <g-button :loading="loading1" @click="loading1 = !loading1">文字</g-button>-->
+<!--            <g-button :loading="true" type="primary">文字</g-button>-->
 <!--        <g-button icon="settings">文字</g-button>-->
 <!--          <g-button  type="success" circle>-->
 <!--             <g-icon name="settings" ></g-icon>-->
@@ -164,21 +185,26 @@
 <!--         <g-button type="danger">文字</g-button>-->
 <!--    <g-button type="danger" disabled>文字</g-button>-->
 <!--        <g-button :loading="true" icon="left" icon-position="right">文字</g-button>-->
-    <g-button type="primary" icon="download" circle></g-button>
-    <g-button type="primary" icon="settings" circle></g-button>
-    <g-button type="default" icon="settings" circle></g-button>
+<!--    <g-button type="primary" icon="download" circle></g-button>-->
+<!--    <g-button type="primary" icon="settings" circle></g-button>-->
+<!--    <g-button type="default" icon="settings" circle></g-button>-->
 
-    <g-button type="primary" >文字</g-button>
-    <g-button type="primary" icon="thumbs-up"></g-button>
-    <g-button type="primary" icon="download" icon-position="left">下载</g-button>
-    <g-button type="primary" icon="settings" icon-position="right">设置</g-button>
-    <g-button type="primary" icon="write" icon-position="right">编辑</g-button>
+<!--    <g-button type="primary" >文字</g-button>-->
+<!--    <g-button type="primary" icon="thumbs-up"></g-button>-->
+<!--    <g-button type="primary" icon="download" icon-position="left">下载</g-button>-->
+<!--    <g-button type="primary" icon="settings" icon-position="right">设置</g-button>-->
+<!--    <g-button type="primary" icon="write" icon-position="right">编辑</g-button>-->
 
-        <g-button-group>
-            <g-button icon="left">后退</g-button>
-            <g-button>更多</g-button>
-            <g-button icon="right" icon-position="right">前进</g-button>
-        </g-button-group>
+<!--        <g-button-group>-->
+<!--            <g-button icon="left">后退</g-button>-->
+<!--            <g-button>更多</g-button>-->
+<!--            <g-button icon="right" icon-position="right">前进</g-button>-->
+<!--        </g-button-group>-->
+<!--    <g-button-group>-->
+<!--        <g-button icon="download"></g-button>-->
+<!--        <g-button icon="settings"></g-button>-->
+<!--        <g-button icon="message" ></g-button>-->
+<!--    </g-button-group>-->
 </div>
 <script src="./src/app.js"></script>
 <script src="./node_modules/vue/dist/vue.min.js"></script>
