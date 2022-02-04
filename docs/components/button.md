@@ -1,9 +1,10 @@
 ---
-title: Button
+title: Button 按钮
 sidebarDepth: 2
 ---
-# 按钮
 
-使用方法
-
-<button-demos></button-demos>
+# Button 按钮
+按钮用于开始一个即时操作。
+<ClientOnly>
+    <button-demos></button-demos>
+</ClientOnly>

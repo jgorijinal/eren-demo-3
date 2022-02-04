@@ -33,7 +33,19 @@
         background: #bbbbbb;
     }
 </style>
-<div id="app">
+<div id="app" style="padding:100px;">
+
+<!--    <g-demo>-->
+<!--        <template v-slot:title>基础用法</template>-->
+<!--        <template v-slot:description>-->
+<!--            这里是简介-->
+<!--        </template>-->
+<!--        <template v-slot:component>-->
+<!--            <g-button icon="settings">button</g-button>-->
+<!--        </template>-->
+<!--        <template v-slot:code>geloajnfsaf</template>-->
+<!--    </g-demo>-->
+<!--    -->
 <!--    <g-collapse :selected="selectedName" @update:selected = "selectedName = $event" >-->
 <!--        <g-collapse-item title="Title1" name="1" disabled>Content 1</g-collapse-item>-->
 <!--        <g-collapse-item title="Title2" name="2">Content2</g-collapse-item>-->
@@ -129,11 +141,39 @@
     <!--    <g-input v-model="message"></g-input>-->
     <!--    <p>{{ message }}</p>-->
     <!--    <hr>-->
-        <g-button :loading="loading1" @click="loading1 = !loading1">文字</g-button>
-        <g-button icon="down" :loading="true">文字</g-button>
-        <g-button icon="settings">文字</g-button>
-        <g-button icon="right">文字</g-button>
-        <g-button :loading="true" icon="left" icon-position="right">文字</g-button>
+<!--        <g-button :loading="loading1" @click="loading1 = !loading1">文字</g-button>-->
+<!--        <g-button icon="down" :loading="true" type="primary" disabled>文字</g-button>-->
+<!--        <g-button icon="settings">文字</g-button>-->
+<!--          <g-button  type="success" circle>-->
+<!--             <g-icon name="settings" ></g-icon>-->
+<!--         </g-button>-->
+<!--    <g-button type="default" circle>-->
+<!--        <g-icon name="message"></g-icon>-->
+<!--    </g-button>-->
+<!--    <g-button type="success" circle>-->
+<!--        <g-icon name="yes"></g-icon>-->
+<!--    </g-button>-->
+<!--    <g-button type="danger" circle>-->
+<!--        <g-icon name="delete"></g-icon>-->
+<!--    </g-button>-->
+<!--    <g-button type="warning" circle>-->
+<!--        <g-icon name="like"></g-icon>-->
+<!--    </g-button>-->
+
+<!--        <g-button icon="right" >文字</g-button>-->
+<!--         <g-button type="danger">文字</g-button>-->
+<!--    <g-button type="danger" disabled>文字</g-button>-->
+<!--        <g-button :loading="true" icon="left" icon-position="right">文字</g-button>-->
+    <g-button type="primary" icon="download" circle></g-button>
+    <g-button type="primary" icon="settings" circle></g-button>
+    <g-button type="default" icon="settings" circle></g-button>
+
+    <g-button type="primary" >文字</g-button>
+    <g-button type="primary" icon="thumbs-up"></g-button>
+    <g-button type="primary" icon="download" icon-position="left">下载</g-button>
+    <g-button type="primary" icon="settings" icon-position="right">设置</g-button>
+    <g-button type="primary" icon="write" icon-position="right">编辑</g-button>
+
         <g-button-group>
             <g-button icon="left">后退</g-button>
             <g-button>更多</g-button>
