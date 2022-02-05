@@ -1,5 +1,5 @@
 module.exports = {
-    base :"/eren-demo-3/",
+    base: "/eren-demo-3/",
     themeConfig: {
         nav: [
             {text: '主页', link: '/'},
@@ -24,7 +24,7 @@ module.exports = {
                     '/components/grid',
                     '/components/layout',
                     '/components/toast',
-                    '/components/tabs',
+                    '/components/popover',
                     '/components/collapse',
                 ]
             },

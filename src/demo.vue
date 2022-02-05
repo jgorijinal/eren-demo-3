@@ -51,11 +51,11 @@ export default {
 <style lang="scss" scoped>
 $border-color: #d9d9d9;
 .demo {
+  transition: all 0.3s;
   border: 1px solid $border-color;
   margin: 16px 0 16px;
   min-width:320px;
   border-radius:6px; ;
-
   &-title {
     font-size: 20px;
     padding: 8px 16px 16px 16px;
@@ -81,6 +81,10 @@ $border-color: #d9d9d9;
     .demo-actions{
       color: #409eff;
       background: #f9fafc;
+      &:hover {
+        color: #409eff;
+        background-color: #f0f3f6;
+      }
     }
   }
   &-code {

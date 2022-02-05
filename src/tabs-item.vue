@@ -24,7 +24,8 @@ export default {
   computed:{
     classes(){
       return {'active':this.active}
-    }
+    },
+
   },
   created(){
     if(this.eventBus){
@@ -56,6 +57,7 @@ export default {
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-right: 0.5em;
   &.active{
     color:#1890ff;
   }
@@ -65,6 +67,9 @@ export default {
   &[disabled]{
     color: #bbb;
     cursor:not-allowed;
+  }
+  > .icon {
+    margin-right:0.5em;
   }
 }
 </style>
