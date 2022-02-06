@@ -93,6 +93,7 @@ $toast-bg: rgba(0, 0, 0, 0.74);
   100% {opacity: 1;transform: translateY(0)}
 }
 .wrapper{
+  z-index: 30;
   position: fixed;
   left: 50%;
   &.position-top {
@@ -135,6 +136,7 @@ $toast-bg: rgba(0, 0, 0, 0.74);
 
   .close {
     padding-left: 16px;
+    white-space: nowrap;
   }
 
   .line {

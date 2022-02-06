@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/jgorijinal/eren-demo-3#readme",
   "dependencies": {
+    "icon.vue": "^0.1.5",
     "parcel-bundler": "^1.9.2",
     "vue": "^2.6.14",
     "vue-hot-reload-api": "^2.3.4"

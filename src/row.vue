@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div class="row" :style="rowStyle" :class="rowClass">
       <slot></slot>
     </div>
@@ -37,7 +37,7 @@ export default {
 <style scoped lang="scss">
 .row{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   &.align-left {
     justify-content: flex-start;
   }
