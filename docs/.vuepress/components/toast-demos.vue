@@ -2,7 +2,7 @@
   <div>
     <g-demo>
       <template v-slot:title>
-        this.$toast
+        1. this.$toast
       </template>
       <template v-slot:description>
         为 Vue.prototype 添加了全局方法 $message。默认从顶部出现 , 默认3 秒后自动消失。
@@ -19,7 +19,7 @@
 
     <g-demo>
       <template v-slot:title>
-      设置文本内容
+      2. 设置文本内容
       </template>
       <template v-slot:description>
       调用方法为<code>this.$toast(Message,toastOptions)</code>。Message 可以接收一个字符串。
@@ -36,7 +36,7 @@
 
     <g-demo>
       <template v-slot:title>
-        使用 HTML 片段
+        3. 使用 HTML 片段
       </template>
       <template v-slot:description>
         将 <code>enableHtml</code> 属性设置为 true，message 就会被当作 HTML 片段处理。

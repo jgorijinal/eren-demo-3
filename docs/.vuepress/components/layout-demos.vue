@@ -2,7 +2,7 @@
   <div>
     <g-demo>
       <template v-slot:title>
-        基本结构
+        1. 基本结构
       </template>
       <template v-slot:description>
         典型的页面布局。

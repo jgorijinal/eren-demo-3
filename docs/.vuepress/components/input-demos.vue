@@ -2,7 +2,7 @@
   <div>
     <g-demo>
       <template v-slot:title>
-        简单用法
+        1. 简单用法
       </template>
       <template v-slot:description>
         可用 <code>value</code>设置初始值。
@@ -31,10 +31,10 @@
 
     <g-demo>
       <template v-slot:title>
-        双向绑定
+        2. 双向绑定
       </template>
       <template v-slot:description>
-        用<code>v-model</code>实现双向绑定
+        用<code>v-model</code>实现双向绑定。
       </template>
       <template v-slot:component>
         <div class="self-component">

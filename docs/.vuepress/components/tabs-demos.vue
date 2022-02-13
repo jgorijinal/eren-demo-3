@@ -2,7 +2,7 @@
 <div>
   <g-demo>
     <template v-slot:title>
-      基本用法
+      1. 基本用法
     </template>
     <template v-slot:description>
       默认选中第一个标签页，也可以通过 <code>:selected.sync</code> 属性来指定当前选中的标签页。
@@ -28,7 +28,7 @@
 
   <g-demo>
     <template v-slot:title>
-      禁用状态
+      2. 禁用状态
     </template>
     <template v-slot:description>
       禁用某一项。添加 <code>disabled</code> 属性即可让按钮处于不可用状态。
@@ -54,7 +54,7 @@
 
   <g-demo>
     <template v-slot:title>
-      图标
+     3. 图标
     </template>
     <template v-slot:description>
       有图标的标签
@@ -89,7 +89,7 @@
 
   <g-demo>
     <template v-slot:title>
-      附加内容
+      4. 附加内容
     </template>
     <template v-slot:description>
       可以在页签右边添加附加操作。

@@ -2,7 +2,7 @@
   <div>
     <g-demo>
       <template v-slot:title>
-      click触发
+      1. click触发
       </template>
       <template v-slot:description>
        <code>trigger</code>属性用于设置何时触发 Popover，支持两种触发方式: <code>click</code> , <code>hover</code> , 默认是<code>click</code>方式。
@@ -41,7 +41,7 @@
 
     <g-demo>
       <template v-slot:title>
-        click触发
+        2. hover触发
       </template>
       <template v-slot:description>
         把<code>trigger</code> 属性设置为 <code>hover</code>。

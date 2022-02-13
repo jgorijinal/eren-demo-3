@@ -2,7 +2,7 @@
   <div>
     <g-demo>
       <template v-slot:title>
-          24格网格
+          1. 24格网格
       </template>
       <template v-slot:description>
         使用单一分栏创建基础的栅格布局。通过 row 和 col 组件，并通过 col 组件的<code>span</code>属性我们就可以自由地组合布局。
@@ -99,7 +99,7 @@
 
     <g-demo>
       <template v-slot:title>
-         栅格间隔
+         2. 栅格间隔
       </template>
       <template v-slot:description>
         栅格之间存在间隔。Row 组件 提供 <code>gutter</code> 属性来指定每一栏之间的间隔，默认间隔为 0。
@@ -139,7 +139,7 @@
 
     <g-demo>
       <template v-slot:title>
-        栅格偏移
+        3. 栅格偏移
       </template>
       <template v-slot:description>
         支持偏移指定的栏数。 通过制定 col 组件的 offset 属性可以指定分栏偏移的栏数。
@@ -205,7 +205,7 @@
     </g-demo>
     <g-demo>
       <template v-slot:title>
-        响应式布局
+        4. 响应式布局
       </template>
       <template v-slot:description>
         预设了4个响应尺寸 ：<code>ipad</code>(≥768px) 、<code>narrow-pc</code>(≥992px)、<code>pc</code>(≥1200px)和 <code>wide-pc</code>(≥1920px), 默认是<code>phone</code>(<768px)。

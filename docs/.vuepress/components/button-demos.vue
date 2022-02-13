@@ -1,7 +1,7 @@
 <template>
   <div>
     <g-demo>
-      <template v-slot:title>基本用法</template>
+      <template v-slot:title>1. 基本用法</template>
       <template v-slot:description>
         基础的按钮用法。使用<code>type</code>、<code>circle</code>属性来定义 Button 的样式。
       </template>
@@ -27,7 +27,7 @@
     </g-demo>
 
     <g-demo>
-      <template v-slot:title>禁用状态</template>
+      <template v-slot:title>2. 禁用状态</template>
       <template v-slot:description>添加 <code>disabled</code> 属性即可让按钮处于不可用状态，同时按钮样式也会改变。
       </template>
       <template v-slot:component>
@@ -44,7 +44,7 @@
       </template>
     </g-demo>
     <g-demo>
-      <template v-slot:title>图标按钮</template>
+      <template v-slot:title>3. 图标按钮</template>
       <template v-slot:description>
         设置 <code>icon</code>属性即可，还可以用<code>icon-position</code>属性也可以设置icon的位置。
       </template>
@@ -63,7 +63,7 @@
     </g-demo>
 
     <g-demo>
-      <template v-slot:title>按钮组</template>
+      <template v-slot:title>4. 按钮组</template>
       <template v-slot:description>
         以按钮组的方式出现，常用于多项类似操作。
         使用<code>g-button-group</code><strong>标签</strong>来嵌套你的按钮。
@@ -90,7 +90,7 @@
     </g-demo>
 
     <g-demo>
-      <template v-slot:title>加载中状态</template>
+      <template v-slot:title>5. 加载中状态</template>
       <template v-slot:description>
         点击按钮后进行数据加载操作，在按钮上显示加载状态。要设置为loading状态，只要设置<code>loading</code>属性为<code>true</code>即可。
       </template>

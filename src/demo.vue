@@ -30,7 +30,7 @@ export default {
   },
   data() {
     return {
-      codeVisible: true,
+      codeVisible: false,
     }
   },
   methods: {
@@ -56,7 +56,7 @@ $border-color: #ccc8c8;
   transition: all 0.3s;
   border: 1px solid $border-color;
   margin: 16px 0 48px;
-  min-width: 320px;
+  min-width: 330px;
   border-radius: 6px;;
 
   &-title {
@@ -100,13 +100,13 @@ $border-color: #ccc8c8;
 
   &-code {
     border-top: 1px dashed $border-color;
-    animation: showCode 250ms forwards;
+    animation: showCode 300ms forwards;
   }
 }
 
 @keyframes showCode {
   from {
-    transform: translateY(-5%);
+    transform: translateY(-10px);
     opacity: 0
   }
   to {

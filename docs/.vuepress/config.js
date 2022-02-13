@@ -1,10 +1,10 @@
 module.exports = {
+    title:'Eren UI',
     base: "/eren-demo-3/",
     themeConfig: {
         nav: [
-            {text: '主页', link: '/'},
-            {text: '文档', link: '/guide/'},
-            {text: '交流', link: 'https://google.com'},
+            {text: '文档', link: '/install/'},
+            {text: 'Github', link: 'https://github.com/jgorijinal/eren-demo-3'},
         ],
         sidebar: [
             {

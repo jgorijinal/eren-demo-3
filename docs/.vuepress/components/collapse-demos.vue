@@ -2,7 +2,7 @@
   <div>
     <g-demo>
       <template v-slot:title>
-        基础用法
+        1. 基础用法
       </template>
       <template v-slot:description>
         可同时展开多个面板，面板之间不影响。可以通过 <code>:selected.sync</code> 属性来指定当前选中的标签页, 还支持<code>disabled</code>属性。
@@ -20,7 +20,7 @@
     </g-demo>
     <g-demo>
       <template v-slot:title>
-        手风琴效果
+        2. 手风琴效果
       </template>
       <template v-slot:description>
         每次只能展开一个面板。添加 <code>single</code> 属性即可实现。
@@ -39,7 +39,7 @@
 
     <g-demo>
       <template v-slot:title>
-        面板嵌套
+        3. 面板嵌套
       </template>
       <template v-slot:description>
         嵌套折叠面板。
