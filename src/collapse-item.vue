@@ -4,8 +4,10 @@
       <g-icon name="right" class="icon" :class="{'active':contentVisible}"></g-icon>
       <div class="title">{{ title }}</div>
     </div>
-    <div class="content" v-if="contentVisible">
-      <slot></slot>
+    <div class="content" v-if="contentVisible" ref="content">
+      <div ref="content-slot-wrapper">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -44,6 +46,15 @@ export default {
         this.contentVisible = false
       }
     })
+  },
+  watch:{
+  contentVisible(){
+    if(this.contentVisible){
+      this.$refs.content.height = this.$refs["content-slot-wrapper"].getBoundingClientRect().height+ 'px'
+    }else {
+      this.$refs.content.height = 0+ 'px'
+    }
+  }
   },
   methods: {
     toggle() {

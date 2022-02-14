@@ -15,10 +15,11 @@
             <div  class="actions" v-if="codeVisible === false" @click="toggleCode">
               <g-icon name="down" ></g-icon>{{ codeAction }}</div>
     </div>
-    <div class="demo-code" v-show="codeVisible === true" ref="demoCode">
-      <slot name="code"></slot>
+    <div class="demo-code" :class="codeActive"   ref="demoCode">
+      <div ref="demoCodeWrapper">
+        <slot name="code"></slot>
+      </div>
     </div>
-
   </div>
 </template>
 <script>
@@ -31,6 +32,15 @@ export default {
   data() {
     return {
       codeVisible: false,
+    }
+  },
+  watch:{
+    codeVisible(){
+      if(this.codeVisible){
+        this.$refs.demoCode.style.height =this.$refs.demoCodeWrapper.getBoundingClientRect().height +'px'
+      }else{
+        this.$refs.demoCode.style.height = 0+ 'px'
+      }
     }
   },
   methods: {
@@ -46,6 +56,9 @@ export default {
         return '显示代码'
       }
     },
+    codeActive(){
+      return {'codeActive':this.codeVisible === true}
+    }
   }
 
 }
@@ -100,7 +113,9 @@ $border-color: #ccc8c8;
 
   &-code {
     border-top: 1px dashed $border-color;
-    animation: showCode 300ms forwards;
+    height: 0;
+    transition: all 250ms;
+    overflow: hidden;
   }
 }
 
