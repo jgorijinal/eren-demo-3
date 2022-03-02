@@ -50,7 +50,9 @@ export default {
   watch:{
   contentVisible(){
     if(this.contentVisible){
-      this.$refs.content.height = this.$refs["content-slot-wrapper"].getBoundingClientRect().height+ 'px'
+      this.$nextTick(()=>{
+        this.$refs.content.height = this.$refs["content-slot-wrapper"].getBoundingClientRect().height+ 'px'
+      })
     }else {
       this.$refs.content.height = 0+ 'px'
     }

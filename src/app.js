@@ -21,7 +21,10 @@ import Popover from './popover.vue'
 import Collapse from './collapse.vue'
 import CollapseItem from './collapse-item.vue'
 import Demo from './demo.vue'
-
+import Carousel from './carousel.vue'
+import CarouselItem from './carousel-item.vue'
+Vue.component('g-carousel' , Carousel)
+Vue.component('g-carousel-item' , CarouselItem)
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
 Vue.component('g-button-group', ButtonGroup)
@@ -52,7 +55,11 @@ new Vue({
             loading1: false,
             message: 'hi',
             selectedTab:'Tab1',
-            selectedName: ['3','2']
+            selectedName: ['3','2'],
+            selectedSlide:'1',
+            selectedSlide2:'2',
+            selectedSlide3:'3',
+            selectedSlide4:'4',
 
         }
     },

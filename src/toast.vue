@@ -147,6 +147,7 @@ $toast-bg: rgba(0, 0, 0, 0.74);
 
   .message {
     padding: 8px 0;
+    white-space: nowrap;
   }
 
 }

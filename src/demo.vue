@@ -70,7 +70,8 @@ $border-color: #ccc8c8;
   border: 1px solid $border-color;
   margin: 16px 0 48px;
   min-width: 330px;
-  border-radius: 6px;;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   &-title {
     font-size: 20px;
@@ -101,18 +102,18 @@ $border-color: #ccc8c8;
 
   &:hover {
     .demo-actions {
-      color: #409eff;
-      background: #f9fafc;
+      color: #3493f5;
+      background: #ebf0f5;
 
       &:hover {
         color: #409eff;
-        background-color: #f0f3f6;
+        background-color: #e2e5e7;
       }
     }
   }
 
   &-code {
-    border-top: 1px dashed $border-color;
+    //border-top: 1px dashed $border-color;
     height: 0;
     transition: all 250ms;
     overflow: hidden;

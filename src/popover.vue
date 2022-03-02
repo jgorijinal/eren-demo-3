@@ -42,12 +42,12 @@ export default {
     }
   },
   destroyed() {
-    if (this.trigger === 'click') {
-      this.$refs.popover.removeEventListener('click', this.onClick)
-    } else {
-      this.$refs.popover.removeEventListener('mouseenter', this.open)
-      this.$refs.popover.removeEventListener('mouseleave', this.close)
-    }
+      // if (this.trigger === 'click') {
+      //   this.$refs.popover.removeEventListener('click', this.onClick)
+      // } else {
+      //   this.$refs.popover.removeEventListener('mouseenter', this.open)
+      //   this.$refs.popover.removeEventListener('mouseleave', this.close)
+      // }
   },
   computed: {
     contentClasses() {
@@ -115,6 +115,7 @@ export default {
     close() {
       this.visible = false
       document.removeEventListener('click', this.onClickDocument)
+
     },
     onClick(event) {
       if (this.$refs.triggerWrapper.contains(event.target)) {
@@ -218,7 +219,7 @@ $border-radius: 4px;
   }
 
   &.position-right {
-    transform: translateX(3%);
+    transform: translateX(8%);
 
     &::before, &::after {
       transform: translateY(-50%);
