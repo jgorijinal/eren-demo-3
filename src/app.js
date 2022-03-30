@@ -115,6 +115,7 @@ new Vue({
         div.style.position='fixed'
         div.style.top=0 +'px'
         div.style.width = '100%'
+        div.style.pointerEvents = 'none'
         document.body.appendChild(div)      //放在
     }
 })

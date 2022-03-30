@@ -15,8 +15,12 @@
   </transition>
 </template>
 <script>
+import Icon from './icon.vue'
 export default {
   name: 'GuluMessage',
+  components:{
+    'g-icon':Icon
+  },
   data() {
     return {
       visible: false
@@ -96,14 +100,14 @@ export default {
   display: flex;
   justify-content: center;
   //animation: slide 0.4s ease;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .message {
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 4px;
-  max-width: 300px;
+  max-width: 350px;
   text-align: center;
   align-items: center;
   background: white;
@@ -171,8 +175,11 @@ export default {
   }
 }
 
-.slide-enter-active, .slide-leave-active {
+.slide-enter-active {
   transition: all .3s;
+}
+.slide-leave-active {
+  transition: all 0.5s;
 }
 
 .slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */

@@ -12,14 +12,6 @@ import PopoverDemos from "./popover-demos";
 
 export default {
   components: {PopoverDemos},
-      created() {                   // 看这里要给全局message提示加容器
-        const div = document.createElement('div')
-        div.classList.add('gulu-messageList')
-        div.style.position='fixed'
-        div.style.top=0 +'px'
-        div.style.width = '100%'
-        document.body.appendChild(div)      //放在
-    }
 }
 </script>
 

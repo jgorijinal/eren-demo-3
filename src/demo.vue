@@ -72,7 +72,9 @@ $border-color: #ccc8c8;
   margin: 16px 0 48px;
   min-width: 330px;
   border-radius: 6px;
+&:hover {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
   &-title {
     font-size: 20px;

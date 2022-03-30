@@ -5,7 +5,7 @@
         1. this.$toast
       </template>
       <template v-slot:description>
-        为 Vue.prototype 添加了全局方法 $message。默认从顶部出现 , 默认3 秒后自动消失。
+        为 Vue.prototype 添加了全局方法 $toast。默认从顶部出现 , 默认3 秒后自动消失。
       </template>
       <template v-slot:component>
         <g-button @click="$toast('点击弹出提示')">上方弹出</g-button>
