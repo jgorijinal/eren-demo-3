@@ -1,5 +1,6 @@
 <template>
   <div class="demo">
+
     <h2 class="demo-title">
       <slot name="title"></slot>
     </h2>
@@ -71,7 +72,7 @@ $border-color: #ccc8c8;
   margin: 16px 0 48px;
   min-width: 330px;
   border-radius: 6px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
   &-title {
     font-size: 20px;

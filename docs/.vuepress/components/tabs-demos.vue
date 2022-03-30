@@ -41,9 +41,9 @@
           <g-tabs-item name=Tab3>Tab 3</g-tabs-item>
         </g-tabs-head>
         <g-tabs-body>
-          <g-tabs-pane name="Tab1">Tab1</g-tabs-pane>
-          <g-tabs-pane name="Tab2">Tab2</g-tabs-pane>
-          <g-tabs-pane name="Tab3">Tab3</g-tabs-pane>
+          <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
+          <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
+          <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
         </g-tabs-body>
       </g-tabs>
     </template>
@@ -76,9 +76,9 @@
           </g-tabs-item>
         </g-tabs-head>
         <g-tabs-body>
-          <g-tabs-pane name="Tab1">Tab 1</g-tabs-pane>
-          <g-tabs-pane name="Tab2">Tab 2</g-tabs-pane>
-          <g-tabs-pane name="Tab3">Tab 3</g-tabs-pane>
+          <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
+          <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
+          <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
         </g-tabs-body>
       </g-tabs>
     </template>
@@ -105,9 +105,9 @@
           </template>
         </g-tabs-head>
         <g-tabs-body>
-          <g-tabs-pane name="Tab1">Tab 1</g-tabs-pane>
-          <g-tabs-pane name="Tab2">Tab 2</g-tabs-pane>
-          <g-tabs-pane name="Tab3">Tab 3</g-tabs-pane>
+          <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
+          <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
+          <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
         </g-tabs-body>
       </g-tabs>
     </template>
@@ -170,9 +170,9 @@ export  default {
                 <g-tabs-item name=Tab3>Tab 3</g-tabs-item>
              </g-tabs-head>
              <g-tabs-body>
-                <g-tabs-pane name="Tab1">Tab1</g-tabs-pane>
-                <g-tabs-pane name="Tab2">Tab2</g-tabs-pane>
-             <g-tabs-pane name="Tab3">Tab3</g-tabs-pane>
+                <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
+                <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
+             <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
         </g-tabs-body>
         </g-tabs>
       `.replace(/^ {8}/gm, '').trim(),
@@ -197,9 +197,9 @@ export  default {
                 </g-tabs-item>
             </g-tabs-head>
             <g-tabs-body>
-                <g-tabs-pane name="Tab1">Tab 1</g-tabs-pane>
-                 <g-tabs-pane name="Tab2">Tab 2</g-tabs-pane>
-                 <g-tabs-pane name="Tab3">Tab 3</g-tabs-pane>
+                <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
+                 <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
+                 <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
             </g-tabs-body>
         </g-tabs>
       `.replace(/^ {8}/gm, '').trim(),
@@ -217,9 +217,9 @@ export  default {
                 </template>
             </g-tabs-head>
             <g-tabs-body>
-                <g-tabs-pane name="Tab1">Tab 1</g-tabs-pane>
-                <g-tabs-pane name="Tab2">Tab 2</g-tabs-pane>
-                <g-tabs-pane name="Tab3">Tab 3</g-tabs-pane>
+                <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
+                <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
+                <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
             </g-tabs-body>
       </g-tabs>
       `.replace(/^ {8}/gm, '').trim(),
