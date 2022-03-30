@@ -24,9 +24,10 @@
         </g-carousel>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content1 }}</code></pre>
+          {{ content1 }}
       </template>
     </g-demo>
+
     <g-demo>
       <template v-slot:title>
         2. 自定义箭头
