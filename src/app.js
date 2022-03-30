@@ -64,6 +64,34 @@ new Vue({
         }
     },
     methods: {
+        message1() {
+            this.$message.info({
+                content:'这是一条普通的全局提示',
+                closable: true,
+                background:true
+            })
+        },
+        message2() {
+            this.$message.success({
+                content:'这是一条成功的全局提示',
+                closable: true,
+                background:true
+            })
+        },
+        message3() {
+            this.$message.warning({
+                content:'这是一条警告的全局提示',
+                closable: true,
+                background:true
+            })
+        },
+        message4() {
+            this.$message.error({
+                content:'对不起 , 对方不想跟你说法',
+                closable: true,
+                background:true
+            })
+        },
         inputChange(e) {
             console.log(e.target.value)
         },
@@ -81,5 +109,13 @@ new Vue({
             })
         }
     },
+    created() {
+        const div = document.createElement('div')
+        div.classList.add('gulu-messageList')
+        div.style.position='fixed'
+        div.style.top=0 +'px'
+        div.style.width = '100%'
+        document.body.appendChild(div)      //放在
+    }
 })
 
