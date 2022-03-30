@@ -117,11 +117,13 @@
 import Demo from '../../../src/demo.vue'
 import Carousel from '../../../src/carousel.vue'
 import CarouselItem from '../../../src/carousel-item.vue'
+import Icon from '../../../src/icon.vue'
 export  default {
   components:{
     'g-demo':Demo,
     'g-carousel':Carousel,
     'g-carousel-item':CarouselItem,
+    'g-icon':Icon
   },
   data(){
     return {

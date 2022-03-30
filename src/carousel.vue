@@ -213,11 +213,12 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-
+    svg {
+      fill: #5f6e86;
+    }
     .icon {
       transition: all 0.2s;
       font-size: 2.5em;
-      opacity: 0.5;
 
       &:hover {
         transform: scale(1.1);
