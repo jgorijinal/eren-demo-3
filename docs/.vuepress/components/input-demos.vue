@@ -25,7 +25,7 @@
         </div>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content1 }}</code></pre>
+      {{ content1 }}
       </template>
     </g-demo>
 
@@ -43,7 +43,7 @@
         <div>value : {{ message }}</div>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content2 }}</code></pre>
+        {{ content2 }}
       </template>
     </g-demo>
   </div>
@@ -63,19 +63,20 @@ export default {
     return {
       message:'Hello',
       content1: `
-        <g-input placeholder="请输入内容"></g-input>
-        <g-input :value="'Input value'"></g-input>
-        <g-input :value="'Disabled'" disabled></g-input>
-        <g-input :value="'Readonly'" readonly></g-input>
-      `.replace(/^ {8}/gm, '').trim(),
+<g-input placeholder="请输入内容"></g-input>
+<g-input :value="'Input value'"></g-input>
+<g-input :value="'Disabled'" disabled></g-input>
+<g-input :value="'Readonly'" readonly></g-input>
+      `,
       content2: `
-        data(){
-            return {message:'Hello'}
-        }
-
 <g-input v-model="message"></g-input>
-      `.replace(/^ {8}/gm, '').trim(),
 
+methods:{
+    data(){
+        return {message:'Hello'}
+      }
+}
+      `,
     }
   }
 }

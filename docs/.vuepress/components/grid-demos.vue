@@ -93,7 +93,7 @@
         </g-row>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content1 }}</code></pre>
+       {{ content1 }}
       </template>
     </g-demo>
 
@@ -133,7 +133,7 @@
         </g-row>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content2 }}</code></pre>
+       {{ content2 }}
       </template>
     </g-demo>
 
@@ -200,7 +200,7 @@
         </g-row>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content3 }}</code></pre>
+        {{ content3 }}
       </template>
     </g-demo>
     <g-demo>
@@ -227,7 +227,7 @@
         </g-row>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content4 }}</code></pre>
+        {{ content4 }}
       </template>
     </g-demo>
   </div>
@@ -246,256 +246,256 @@ export  default {
     return {
       content1:`
 <g-row class="demoRow">
-          <g-col span="8">
-            <div class="demoCol">8</div>
-          </g-col>
-          <g-col span="8">
-            <div class="demoCol">8</div>
-          </g-col>
-          <g-col span="8">
-            <div class="demoCol">8</div>
-          </g-col>
-        </g-row>
-        <g-row class="demoRow">
-          <g-col span="6">
-            <div class="demoCol">6</div>
-          </g-col>
-          <g-col span="6">
-            <div class="demoCol">6</div>
-          </g-col>
-          <g-col span="6">
-            <div class="demoCol">6</div>
-          </g-col>
-          <g-col span="6">
-            <div class="demoCol">6</div>
-          </g-col>
-        </g-row>
-        <g-row class="demoRow">
-          <g-col span="4">
-            <div class="demoCol">4</div>
-          </g-col>
-          <g-col span="4">
-            <div class="demoCol">4</div>
-          </g-col>
-          <g-col span="4">
-            <div class="demoCol">4</div>
-          </g-col>
-          <g-col span="4">
-            <div class="demoCol">4</div>
-          </g-col>
-          <g-col span="4">
-            <div class="demoCol">4</div>
-          </g-col>
-          <g-col span="4">
-            <div class="demoCol">4</div>
-          </g-col>
-        </g-row>
-        <g-row class="demoRow">
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-        </g-row>
+  <g-col span="8">
+    <div class="demoCol">8</div>
+  </g-col>
+  <g-col span="8">
+    <div class="demoCol">8</div>
+  </g-col>
+  <g-col span="8">
+    <div class="demoCol">8</div>
+  </g-col>
+</g-row>
+<g-row class="demoRow">
+  <g-col span="6">
+    <div class="demoCol">6</div>
+  </g-col>
+  <g-col span="6">
+    <div class="demoCol">6</div>
+  </g-col>
+  <g-col span="6">
+    <div class="demoCol">6</div>
+  </g-col>
+  <g-col span="6">
+    <div class="demoCol">6</div>
+  </g-col>
+</g-row>
+<g-row class="demoRow">
+  <g-col span="4">
+    <div class="demoCol">4</div>
+  </g-col>
+  <g-col span="4">
+    <div class="demoCol">4</div>
+  </g-col>
+  <g-col span="4">
+    <div class="demoCol">4</div>
+  </g-col>
+  <g-col span="4">
+    <div class="demoCol">4</div>
+  </g-col>
+  <g-col span="4">
+    <div class="demoCol">4</div>
+  </g-col>
+  <g-col span="4">
+    <div class="demoCol">4</div>
+  </g-col>
+</g-row>
+<g-row class="demoRow">
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+</g-row>
 
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-            .demoCol{
-                height: 50px;
-                border: 1px solid #ccc;
-                background: #eee;;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                }
-            .demoRow {
-                 margin: 10px 0;
-            }
-        </style>
-      `.replace(/^ {8}/gm, '').trim(),
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .demoCol{
+        height: 50px;
+        border: 1px solid #ccc;
+        background: #eee;;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    .demoRow {
+         margin: 10px 0;
+    }
+</style>
+      `,
       content2:`
 <g-row class="demoRow">
-          <g-col span="8">
-            <div class="demoCol">8</div>
-          </g-col>
-          <g-col span="8">
-            <div class="demoCol">8</div>
-          </g-col>
-          <g-col span="8">
-            <div class="demoCol">8</div>
-          </g-col>
-        </g-row>
+  <g-col span="8">
+    <div class="demoCol">8</div>
+  </g-col>
+  <g-col span="8">
+    <div class="demoCol">8</div>
+  </g-col>
+  <g-col span="8">
+    <div class="demoCol">8</div>
+  </g-col>
+</g-row>
 
-        <g-row class="demoRow" gutter="10">
-          <g-col span="6">
-            <div class="demoCol">6</div>
-          </g-col>
-          <g-col span="6">
-            <div class="demoCol">6</div>
-          </g-col>
-          <g-col span="6">
-            <div class="demoCol">6</div>
-          </g-col>
-          <g-col span="6">
-            <div class="demoCol">6</div>
-          </g-col>
-        </g-row>
+<g-row class="demoRow" gutter="10">
+  <g-col span="6">
+    <div class="demoCol">6</div>
+  </g-col>
+  <g-col span="6">
+    <div class="demoCol">6</div>
+  </g-col>
+  <g-col span="6">
+    <div class="demoCol">6</div>
+  </g-col>
+  <g-col span="6">
+    <div class="demoCol">6</div>
+  </g-col>
+</g-row>
 
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-            .demoCol{
-                height: 50px;
-                border: 1px solid #ccc;
-                background: #eee;;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                }
-            .demoRow {
-                 margin: 10px 0;
-            }
-        </style>
-      `.replace(/^ {8}/gm, '').trim(),
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .demoCol{
+        height: 50px;
+        border: 1px solid #ccc;
+        background: #eee;;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    .demoRow {
+         margin: 10px 0;
+    }
+</style>
+      `,
       content3:`
 <g-row class="demoRow">
-          <g-col span="8">
-            <div class="demoCol">8</div>
-          </g-col>
-          <g-col span="8" offset="8">
-            <div class="demoCol">8</div>
-          </g-col>
-        </g-row>
-        <g-row class="demoRow" gutter="10">
-          <g-col span="6" offset="6">
-            <div class="demoCol">6</div>
-          </g-col>
-          <g-col span="6" offset="6">
-            <div class="demoCol">6</div>
-          </g-col>
-        </g-row>
-        <g-row class="demoRow" gutter="10">
-          <g-col span="4">
-            <div class="demoCol">4</div>
-          </g-col>
-          <g-col span="4" offset="4">
-            <div class="demoCol">4</div>
-          </g-col>
-          <g-col span="4" offset="8">
-            <div class="demoCol">4</div>
-          </g-col>
-        </g-row>
-        <g-row class="demoRow" gutter="10">
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2" offset="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2" offset="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2" offset="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2">
-            <div class="demoCol">2</div>
-          </g-col>
-          <g-col span="2" offset="2">
-            <div class="demoCol">2</div>
-          </g-col>
-        </g-row>
+  <g-col span="8">
+    <div class="demoCol">8</div>
+  </g-col>
+  <g-col span="8" offset="8">
+    <div class="demoCol">8</div>
+  </g-col>
+</g-row>
+<g-row class="demoRow" gutter="10">
+  <g-col span="6" offset="6">
+    <div class="demoCol">6</div>
+  </g-col>
+  <g-col span="6" offset="6">
+    <div class="demoCol">6</div>
+  </g-col>
+</g-row>
+<g-row class="demoRow" gutter="10">
+  <g-col span="4">
+    <div class="demoCol">4</div>
+  </g-col>
+  <g-col span="4" offset="4">
+    <div class="demoCol">4</div>
+  </g-col>
+  <g-col span="4" offset="8">
+    <div class="demoCol">4</div>
+  </g-col>
+</g-row>
+<g-row class="demoRow" gutter="10">
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2" offset="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2" offset="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2" offset="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2">
+    <div class="demoCol">2</div>
+  </g-col>
+  <g-col span="2" offset="2">
+    <div class="demoCol">2</div>
+  </g-col>
+</g-row>
 
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-            .demoCol{
-                height: 50px;
-                border: 1px solid #ccc;
-                background: #eee;;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                }
-            .demoRow {
-                 margin: 10px 0;
-            }
-        </style>
-      `.replace(/^ {8}/gm, '').trim(),
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .demoCol{
+        height: 50px;
+        border: 1px solid #ccc;
+        background: #eee;;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    .demoRow {
+         margin: 10px 0;
+    }
+</style>
+      `,
       content4:`
 <g-row class="demoRow" gutter="10">
-     <g-col span="8" offset="0" :ipad="{span:6,offset:0}" :narrow-pc="{span:4,offset:0}" :pc="{span:3,offset:0}" :wide-pc="{span:1,offset:0}">
-            <div class="demoCol"></div>
-          </g-col>
-          <g-col span="4" offset="0" :ipad="{span:6,offset:0}" :narrow-pc="{span:8,offset:0}" :pc="{span:9,offset:0}" :wide-pc="{span:11,offset:0}">
-            <div class="demoCol"></div>
-          </g-col>
-          <g-col span="4" offset="0" :ipad="{span:6,offset:0}" :narrow-pc="{span:8,offset:0}" :pc="{span:9,offset:0}" :wide-pc="{span:11,offset:0}">
-            <div class="demoCol"></div>
-          </g-col>
-          <g-col span="8" offset="0" :ipad="{span:6,offset:0}" :narrow-pc="{span:4,offset:0}" :pc="{span:3,offset:0}" :wide-pc="{span:1,offset:0}">
-            <div class="demoCol"></div>
-          </g-col>
-        </g-row>
+   <g-col span="8" offset="0" :ipad="{span:6,offset:0}" :narrow-pc="{span:4,offset:0}" :pc="{span:3,offset:0}" :wide-pc="{span:1,offset:0}">
+        <div class="demoCol"></div>
+   </g-col>
+   <g-col span="4" offset="0" :ipad="{span:6,offset:0}" :narrow-pc="{span:8,offset:0}" :pc="{span:9,offset:0}" :wide-pc="{span:11,offset:0}">
+        <div class="demoCol"></div>
+  </g-col>
+   <g-col span="4" offset="0" :ipad="{span:6,offset:0}" :narrow-pc="{span:8,offset:0}" :pc="{span:9,offset:0}" :wide-pc="{span:11,offset:0}">
+        <div class="demoCol"></div>
+  </g-col>
+  <g-col span="8" offset="0" :ipad="{span:6,offset:0}" :narrow-pc="{span:4,offset:0}" :pc="{span:3,offset:0}" :wide-pc="{span:1,offset:0}">
+         <div class="demoCol"></div>
+  </g-col>
+</g-row>
 
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-            .demoCol{
-                height: 50px;
-                border: 1px solid #ccc;
-                background: #eee;;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                }
-            .demoRow {
-                 margin: 10px 0;
-            }
-        </style>
-      `.replace(/^ {8}/gm, '').trim(),
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .demoCol{
+        height: 50px;
+        border: 1px solid #ccc;
+        background: #eee;;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    .demoRow {
+         margin: 10px 0;
+    }
+</style>
+      `,
     }
   }
 

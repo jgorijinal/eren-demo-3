@@ -11,21 +11,27 @@
       <slot name="component"></slot>
     </div>
     <div class="demo-actions">
-            <div  class="actions" v-if="codeVisible === true" @click="toggleCode">
-              <g-icon name="up" ></g-icon>{{ codeAction }}</div>
-            <div  class="actions" v-if="codeVisible === false" @click="toggleCode">
-              <g-icon name="down" ></g-icon>{{ codeAction }}</div>
+      <div class="actions" v-if="codeVisible === true" @click="toggleCode">
+        <g-icon name="up"></g-icon>
+        {{ codeAction }}
+      </div>
+      <div class="actions" v-if="codeVisible === false" @click="toggleCode">
+        <g-icon name="down"></g-icon>
+        {{ codeAction }}
+      </div>
     </div>
-    <div class="demo-code" :class="codeActive"   ref="demoCode">
+    <div class="demo-code" :class="codeActive" ref="demoCode">
       <div ref="demoCodeWrapper">
-        <slot name="code"></slot>
+            <pre class="language-html" v-html="Prism.highlight(this.code, Prism.languages.html, 'html')" />
       </div>
     </div>
   </div>
 </template>
 <script>
 import Icon from './icon.vue'
-
+import 'prismjs';
+import 'prismjs/themes/prism-okaidia.css';  //prism-tomorrow.css  //prism-okaidia.css
+const Prism = window.Prism ;
 export default {
   components: {
     'g-icon': Icon
@@ -33,14 +39,16 @@ export default {
   data() {
     return {
       codeVisible: false,
+      code:undefined,
+      Prism:undefined
     }
   },
-  watch:{
-    codeVisible(){
-      if(this.codeVisible){
-        this.$refs.demoCode.style.height =this.$refs.demoCodeWrapper.getBoundingClientRect().height +'px'
-      }else{
-        this.$refs.demoCode.style.height = 0+ 'px'
+  watch: {
+    codeVisible() {
+      if (this.codeVisible) {
+        this.$refs.demoCode.style.height = this.$refs.demoCodeWrapper.getBoundingClientRect().height + 'px'
+      } else {
+        this.$refs.demoCode.style.height = 0 + 'px'
       }
     }
   },
@@ -57,11 +65,16 @@ export default {
         return '显示代码'
       }
     },
-    codeActive(){
-      return {'codeActive':this.codeVisible === true}
+    codeActive() {
+      return {'codeActive': this.codeVisible === true}
     }
+  },
+  created(){
+    this.Prism = Prism
+  },
+  mounted() {
+    this.code = this.$slots.code[0].text
   }
-
 }
 </script>
 <style lang="scss" scoped>
@@ -72,9 +85,10 @@ $border-color: #ccc8c8;
   margin: 16px 0 48px;
   min-width: 330px;
   border-radius: 6px;
-&:hover {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
+
+  &:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
 
   &-title {
     font-size: 20px;
@@ -120,6 +134,10 @@ $border-color: #ccc8c8;
     height: 0;
     transition: all 250ms;
     overflow: hidden;
+    .language-html {
+      margin: 0;
+      padding: 0 26px;
+    }
   }
 }
 

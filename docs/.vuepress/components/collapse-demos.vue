@@ -15,7 +15,7 @@
         </g-collapse>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content1 }}</code></pre>
+       {{ content1 }}
       </template>
     </g-demo>
     <g-demo>
@@ -33,7 +33,7 @@
         </g-collapse>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content2 }}</code></pre>
+    {{ content2 }}
       </template>
     </g-demo>
 
@@ -56,7 +56,7 @@
         </g-collapse>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content3 }}</code></pre>
+        {{ content3 }}
       </template>
     </g-demo>
   </div>
@@ -78,57 +78,59 @@ export  default {
       selectedName1:['2','3'],
       selectedName2:['2'],
       content1:`
-         data(){
-           return {
-                selectedName:['2','3'],
-                text:'A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.'
-          }
-        }
+<g-collapse :selected.sync="selectedName">
+    <g-collapse-item title="Title1" name="1" disabled>{{text}}</g-collapse-item>
+    <g-collapse-item title="Title2" name="2">{{text}}</g-collapse-item>
+    <g-collapse-item title="Title3" name="3" >{{text}}</g-collapse-item>
+</g-collapse>
 
-        <g-collapse :selected.sync="selectedName">
-          <g-collapse-item title="Title1" name="1" disabled>{{text}}</g-collapse-item>
-          <g-collapse-item title="Title2" name="2">{{text}}</g-collapse-item>
-          <g-collapse-item title="Title3" name="3" >{{text}}</g-collapse-item>
-        </g-collapse>
-      `.replace(/^ {8}/gm, '').trim(),
+methods:{
+   data(){
+     return {
+          selectedName:['2','3'],
+          text:'A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.'
+      }
+  }
+}
+      `,
       content2:`
-        data(){
-           return {
-                selectedName:['2'],
-                text:'A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.'
-          }
-        }
+<g-collapse :selected.sync="selectedName" single>
+    <g-collapse-item title="Title1" name="1" >{{text}}</g-collapse-item>
+    <g-collapse-item title="Title2" name="2">{{text}}</g-collapse-item>
+    <g-collapse-item title="Title3" name="3" >{{text}}</g-collapse-item>
+</g-collapse>
 
-        <g-collapse :selected.sync="selectedName" single>
-          <g-collapse-item title="Title1" name="1" >{{text}}</g-collapse-item>
-          <g-collapse-item title="Title2" name="2">{{text}}</g-collapse-item>
-          <g-collapse-item title="Title3" name="3" >{{text}}</g-collapse-item>
-        </g-collapse>
-      `.replace(/^ {8}/gm, '').trim(),
+methods:{
+    data(){
+       return {
+            selectedName:['2'],
+            text:'A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.'
+        }
+    }
+}
+      `,
       content3:`
-        data(){
-           return {
-                selectedName:['2','3'],
-                text:'A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.'
+<g-collapse :selected.sync="selectedName">
+    <g-collapse-item title="Title1" name="1" >{{text}}</g-collapse-item>
+    <g-collapse-item title="Title2" name="2">{{text}}</g-collapse-item>
+    <g-collapse-item title="Title3" name="3" >
+      <g-collapse-item title="Title4" name="4">
+        {{text}}
+      </g-collapse-item>
+    </g-collapse-item>
+</g-collapse>
+
+ methods:{
+     data(){
+         return {
+            selectedName:['2','3'],
+            text:'A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.'
           }
-        }
-
-        <g-collapse :selected.sync="selectedName">
-          <g-collapse-item title="Title1" name="1" >{{text}}</g-collapse-item>
-          <g-collapse-item title="Title2" name="2">{{text}}</g-collapse-item>
-          <g-collapse-item title="Title3" name="3" >
-            <g-collapse-item title="Title4" name="4">
-              {{text}}
-            </g-collapse-item>
-          </g-collapse-item>
-        </g-collapse>
-      `.replace(/^ {8}/gm, '').trim(),
-
-
+      }
+}
+      `,
     }
   },
-
-
 }
 </script>
 <style lang="scss" scoped>

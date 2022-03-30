@@ -42,7 +42,7 @@
         </g-layout>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content1 }}</code></pre>
+        {{ content1 }}
       </template>
     </g-demo>
   </div>
@@ -68,39 +68,39 @@ export  default {
   data(){
     return {
       content1:`
-              <g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
-          <g-header style="height: 50px; background:lightskyblue;">Header</g-header>
-          <g-content style="height: 100px; background:deepskyblue;">Content</g-content>
-          <g-footer style="height: 50px; background:lightskyblue;">Footer</g-footer>
-        </g-layout>
+<g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
+    <g-header style="height: 50px; background:lightskyblue;">Header</g-header>
+    <g-content style="height: 100px; background:deepskyblue;">Content</g-content>
+    <g-footer style="height: 50px; background:lightskyblue;">Footer</g-footer>
+</g-layout>
 
-        <g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
-          <g-header style="height: 50px; background:lightskyblue;">Header</g-header>
-          <g-layout>
-            <g-sider style="height: 100px; background:#ddd; width:200px; color: black;">Sider</g-sider>
-            <g-content style="height: 100px; background:deepskyblue;">Content</g-content>
-          </g-layout>
-          <g-footer style="height: 50px; background:lightskyblue;">Footer</g-footer>
-        </g-layout>
+<g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
+    <g-header style="height: 50px; background:lightskyblue;">Header</g-header>
+    <g-layout>
+        <g-sider style="height: 100px; background:#ddd; width:200px; color: black;">Sider</g-sider>
+        <g-content style="height: 100px; background:deepskyblue;">Content</g-content>
+    </g-layout>
+    <g-footer style="height: 50px; background:lightskyblue;">Footer</g-footer>
+</g-layout>
 
-        <g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
-          <g-header style="height: 50px; background:lightskyblue;">Header</g-header>
-          <g-layout>
-            <g-content style="height: 100px; background:deepskyblue;">Content</g-content>
-            <g-sider style="height: 100px; background:#ddd; width:200px; color: black;">Sider</g-sider>
-          </g-layout>
-          <g-footer style="height: 50px; background:lightskyblue;">Footer</g-footer>
-        </g-layout>
+<g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
+    <g-header style="height: 50px; background:lightskyblue;">Header</g-header>
+    <g-layout>
+        <g-content style="height: 100px; background:deepskyblue;">Content</g-content>
+        <g-sider style="height: 100px; background:#ddd; width:200px; color: black;">Sider</g-sider>
+    </g-layout>
+    <g-footer style="height: 50px; background:lightskyblue;">Footer</g-footer>
+</g-layout>
 
-        <g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
-          <g-sider style=" background:#ddd; width:200px; color: black;">Sider</g-sider>
-          <g-layout>
-            <g-header style="height: 50px; background:lightskyblue;">Header</g-header>
-            <g-content style="height: 100px; background:deepskyblue;">Content</g-content>
-            <g-footer style="height: 50px; background:lightskyblue;">Footer</g-footer>
-          </g-layout>
-        </g-layout>
-      `.replace(/^ {8}/gm, '').trim(),
+<g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
+    <g-sider style=" background:#ddd; width:200px; color: black;">Sider</g-sider>
+    <g-layout>
+        <g-header style="height: 50px; background:lightskyblue;">Header</g-header>
+        <g-content style="height: 100px; background:deepskyblue;">Content</g-content>
+        <g-footer style="height: 50px; background:lightskyblue;">Footer</g-footer>
+    </g-layout>
+</g-layout>
+      `,
     }
   }
 

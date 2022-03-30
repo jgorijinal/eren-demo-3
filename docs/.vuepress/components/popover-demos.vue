@@ -35,7 +35,7 @@
         </g-popover>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content1 }}</code></pre>
+        {{ content1 }}
       </template>
     </g-demo>
 
@@ -73,7 +73,7 @@
         </g-popover>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content2 }}</code></pre>
+     {{ content2 }}
       </template>
     </g-demo>
   </div>
@@ -91,57 +91,57 @@ export  default {
   data(){
     return {
       content1:`
-        <g-popover>
-          <g-button>上方弹出</g-button>
-          <template slot="content">
-            弹出内容
-          </template>
-        </g-popover>
-        <g-popover position="bottom">
-          <g-button>下方弹出</g-button>
-          <template slot="content">
-            弹出内容
-          </template>
-        </g-popover>
-        <g-popover position="left">
-          <g-button>左边弹出</g-button>
-          <template slot="content">
-            弹出内容
-          </template>
-        </g-popover>
-        <g-popover position="right">
-          <g-button>右边弹出</g-button>
-          <template slot="content">
-            弹出内容
-          </template>
-        </g-popover>
-      `.replace(/^ {8}/gm, '').trim(),
+<g-popover>
+  <g-button>上方弹出</g-button>
+  <template slot="content">
+    弹出内容
+  </template>
+</g-popover>
+<g-popover position="bottom">
+  <g-button>下方弹出</g-button>
+  <template slot="content">
+    弹出内容
+  </template>
+</g-popover>
+<g-popover position="left">
+  <g-button>左边弹出</g-button>
+  <template slot="content">
+    弹出内容
+  </template>
+</g-popover>
+<g-popover position="right">
+  <g-button>右边弹出</g-button>
+  <template slot="content">
+    弹出内容
+  </template>
+</g-popover>
+      `,
       content2:`
-              <g-popover trigger="hover">
-          <g-button>上方弹出</g-button>
-          <template slot="content">
-            弹出内容
-          </template>
-        </g-popover>
-        <g-popover position="bottom" trigger="hover">
-          <g-button>下方弹出</g-button>
-          <template slot="content">
-            弹出内容
-          </template>
-        </g-popover>
-        <g-popover position="left" trigger="hover">
-          <g-button>左边弹出</g-button>
-          <template slot="content">
-            弹出内容
-          </template>
-        </g-popover>
-        <g-popover position="right" trigger="hover">
-          <g-button>右边弹出</g-button>
-          <template slot="content">
-            弹出内容
-          </template>
-        </g-popover>
-       `.replace(/^ {8}/gm, '').trim(),
+ <g-popover trigger="hover">
+  <g-button>上方弹出</g-button>
+  <template slot="content">
+    弹出内容
+  </template>
+</g-popover>
+<g-popover position="bottom" trigger="hover">
+  <g-button>下方弹出</g-button>
+  <template slot="content">
+    弹出内容
+  </template>
+</g-popover>
+<g-popover position="left" trigger="hover">
+  <g-button>左边弹出</g-button>
+  <template slot="content">
+    弹出内容
+  </template>
+</g-popover>
+<g-popover position="right" trigger="hover">
+  <g-button>右边弹出</g-button>
+  <template slot="content">
+    弹出内容
+  </template>
+</g-popover>
+       `,
     }
   }
 

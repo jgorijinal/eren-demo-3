@@ -1,0 +1,78 @@
+Arguments: 
+  D:\Software\nodejs\node.exe D:\Software\yarn\bin\yarn.js add prismjs
+
+PATH: 
+  D:\Software\cmder\vendor\git-for-windows\mingw64\bin;D:\Software\cmder\vendor\git-for-windows\usr\bin;C:\Users\86188\bin;C:\Users\86188\Desktop\eren-test-4\node_modules\.bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\86188\AppData\Local\Programs\Python\Python37;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;D:\Software\yarn\bin;C:\Users\86188\Desktop;C:\Program Files\Git\cmd;D:\Software\nodejs;C:\Users\86188\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\86188\AppData\Local\Programs\Python\Python37;C:\Users\86188\AppData\Local\Microsoft\WindowsApps;C:\Users\86188\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\86188\AppData\Local\atom\bin;C:\Users\86188\AppData\Local\Microsoft\WindowsApps;C:\Users\86188\AppData\Local\Yarn\bin;C:\Users\86188\Desktop;D:\webstorm2\WebStorm 2021.2.3\bin;D:\docker\Docker Toolbox;D:\Software\nodejs;C:\Users\86188\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  16.14.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\86188\Desktop\eren-test-4\node_modules\deasync\bin\win32-x64-node-16\deasync.node'
+
+npm manifest: 
+  {
+    "name": "eren-ui-1",
+    "version": "0.0.3",
+    "description": "一个VueUI组件库",
+    "main": "dist/index.js",
+    "scripts": {
+      "dev-test": "parcel watch test/* --no-cache & karma start",
+      "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
+      "docs:dev": "vuepress dev docs",
+      "docs:build": "vuepress build docs"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/jgorijinal/eren-demo-3.git"
+    },
+    "keywords": [
+      "vue",
+      "ui"
+    ],
+    "author": "Eren",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/jgorijinal/eren-demo-3/issues"
+    },
+    "homepage": "https://github.com/jgorijinal/eren-demo-3#readme",
+    "dependencies": {
+      "icon.vue": "^0.1.5",
+      "parcel-bundler": "^1.9.2",
+      "vue": "^2.6.14",
+      "vue-hot-reload-api": "^2.3.4"
+    },
+    "alias": {
+      "vue": "./node_modules/vue/dist/vue.common.js"
+    },
+    "devDependencies": {
+      "@vue/component-compiler-utils": "^3.3.0",
+      "chai": "^4.3.4",
+      "chai-spies": "^1.0.0",
+      "karma": "^3.0.0",
+      "karma-chai": "^0.1.0",
+      "karma-chai-spies": "^0.1.4",
+      "karma-chrome-launcher": "^3.1.0",
+      "karma-mocha": "^2.0.1",
+      "karma-sinon-chai": "^2.0.2",
+      "mocha": "^9.1.4",
+      "node-sass": "^7.0.1",
+      "sass-loader": "^7.0.1",
+      "sinon": "^6.0.1",
+      "sinon-chai": "^3.7.0",
+      "vue-template-compiler": "^2.6.14",
+      "vuepress": "^1.9.7"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -22,7 +22,7 @@
       </g-tabs>
     </template>
     <template v-slot:code>
-      <pre><code>{{ content1 }}</code></pre>
+      {{ content1 }}
     </template>
   </g-demo>
 
@@ -48,7 +48,7 @@
       </g-tabs>
     </template>
     <template v-slot:code>
-      <pre><code>{{ content2 }}</code></pre>
+      {{ content2 }}
     </template>
   </g-demo>
 
@@ -83,7 +83,7 @@
       </g-tabs>
     </template>
     <template v-slot:code>
-      <pre><code>{{ content4 }}</code></pre>
+    {{ content3 }}
     </template>
   </g-demo>
 
@@ -112,7 +112,7 @@
       </g-tabs>
     </template>
     <template v-slot:code>
-      <pre><code>{{ content2 }}</code></pre>
+    {{ content4 }}
     </template>
   </g-demo>
 </div>
@@ -141,88 +141,98 @@ export  default {
     return {
       selectedTab:'Tab1',
       content1: `
-          data(){
-          return {selectedTab: 'Tab1'}
-          }
+<g-tabs :selected="selected">
+  <g-tabs-head>
+      <g-tabs-item name="Tab1">Tabs 1</g-tabs-item>
+      <g-tabs-item name="Tab2">Tab 2</g-tabs-item>
+      <g-tabs-item name=Tab3>Tab 3</g-tabs-item>
+  </g-tabs-head>
+  <g-tabs-body>
+      <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
+      <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
+      <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
+  </g-tabs-body>
+</g-tabs>
 
-        <g-tabs :selected="selected">
-            <g-tabs-head>
-                <g-tabs-item name="Tab1">Tabs 1</g-tabs-item>
-                <g-tabs-item name="Tab2">Tab 2</g-tabs-item>
-                <g-tabs-item name=Tab3>Tab 3</g-tabs-item>
-            </g-tabs-head>
-            <g-tabs-body>
-                <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
-                <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
-                <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
-            </g-tabs-body>
-        </g-tabs>
-          `.replace(/^ {8}/gm, '').trim(),
+methods:{
+    data(){
+          return {selectedTab: 'Tab1'}
+    }
+
+}
+          `,
       content2:`
-          data(){
-          return {selectedTab: 'Tab1'}
-          }
+<g-tabs :selected.sync="selectedTab">
+  <g-tabs-head>
+      <g-tabs-item name="Tab1">Tabs 1</g-tabs-item>
+      <g-tabs-item name="Tab2"  disabled>Tab 2</g-tabs-item>
+      <g-tabs-item name=Tab3>Tab 3</g-tabs-item>
+   </g-tabs-head>
+   <g-tabs-body>
+      <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
+      <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
+   <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
+</g-tabs-body>
+</g-tabs>
 
-        <g-tabs :selected.sync="selectedTab">
-            <g-tabs-head>
-                <g-tabs-item name="Tab1">Tabs 1</g-tabs-item>
-                <g-tabs-item name="Tab2"  disabled>Tab 2</g-tabs-item>
-                <g-tabs-item name=Tab3>Tab 3</g-tabs-item>
-             </g-tabs-head>
-             <g-tabs-body>
-                <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
-                <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
-             <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
-        </g-tabs-body>
-        </g-tabs>
-      `.replace(/^ {8}/gm, '').trim(),
+methods:{
+  data(){
+      return {selectedTab: 'Tab1'}
+  }
+}
+      `,
       content3:`
-      data(){
-          return {selectedTab: 'Tab1'}
-          }
+<g-tabs :selected.sync="selectedTab">
+    <g-tabs-head>
+        <g-tabs-item name="Tab1">
+            <g-icon name="data"></g-icon>
+             Tabs 1
+        </g-tabs-item>
+        <g-tabs-item name="Tab2">
+            <g-icon name="rmb"></g-icon>
+             Tab 2
+        </g-tabs-item>
+        <g-tabs-item name=Tab3>
+             <g-icon name="gift"></g-icon>
+             Tab 3
+        </g-tabs-item>
+    </g-tabs-head>
+    <g-tabs-body>
+        <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
+         <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
+         <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
+    </g-tabs-body>
+</g-tabs>
 
-        <g-tabs :selected.sync="selectedTab">
-            <g-tabs-head>
-                <g-tabs-item name="Tab1">
-                    <g-icon name="data"></g-icon>
-                     Tabs 1
-                </g-tabs-item>
-                <g-tabs-item name="Tab2">
-                    <g-icon name="rmb"></g-icon>
-                     Tab 2
-                </g-tabs-item>
-                <g-tabs-item name=Tab3>
-                     <g-icon name="gift"></g-icon>
-                     Tab 3
-                </g-tabs-item>
-            </g-tabs-head>
-            <g-tabs-body>
-                <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
-                 <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
-                 <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
-            </g-tabs-body>
-        </g-tabs>
-      `.replace(/^ {8}/gm, '').trim(),
-      content4:`
-       data(){
+methods:{
+    data(){
           return {selectedTab: 'Tab1'}
-          }
-        <g-tabs :selected.sync="selectedTab">
-            <g-tabs-head>
-                <g-tabs-item name="Tab1">Tab 1</g-tabs-item>
-                <g-tabs-item name="Tab2">Tab 2</g-tabs-item>
-                <g-tabs-item name="Tab3">Tab 3</g-tabs-item>
-                <template v-slot:actions>
-                    <g-button>Extra actions</g-button>
-                </template>
-            </g-tabs-head>
-            <g-tabs-body>
-                <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
-                <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
-                <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
-            </g-tabs-body>
-      </g-tabs>
-      `.replace(/^ {8}/gm, '').trim(),
+      }
+}
+      `,
+      content4:`
+<g-tabs :selected.sync="selectedTab">
+    <g-tabs-head>
+        <g-tabs-item name="Tab1">Tab 1</g-tabs-item>
+        <g-tabs-item name="Tab2">Tab 2</g-tabs-item>
+        <g-tabs-item name="Tab3">Tab 3</g-tabs-item>
+        <template v-slot:actions>
+            <g-button>Extra actions</g-button>
+        </template>
+    </g-tabs-head>
+    <g-tabs-body>
+        <g-tabs-pane name="Tab1">Content of Tab Pane 1</g-tabs-pane>
+        <g-tabs-pane name="Tab2">Content of Tab Pane 2</g-tabs-pane>
+        <g-tabs-pane name="Tab3">Content of Tab Pane 3</g-tabs-pane>
+    </g-tabs-body>
+</g-tabs>
+
+methods:{
+    data(){
+         return {selectedTab: 'Tab1'}
+      }
+}
+      `,
     }
   }
 

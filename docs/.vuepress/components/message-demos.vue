@@ -11,7 +11,7 @@
         <g-button type="primary" @click="info">显示普通的提示</g-button>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content1 }}</code></pre>
+        {{ content1 }}
       </template>
     </g-demo>
 
@@ -31,7 +31,7 @@
         </div>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content2 }}</code></pre>
+        {{ content2 }}
       </template>
     </g-demo>
 
@@ -51,7 +51,7 @@
         </div>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content3 }}</code></pre>
+        {{ content3 }}
       </template>
     </g-demo>
 
@@ -68,7 +68,7 @@
         </div>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content4 }}</code></pre>
+     {{ content4 }}
       </template>
     </g-demo>
 
@@ -89,7 +89,7 @@
         </div>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content5 }}</code></pre>
+        {{ content5 }}
       </template>
     </g-demo>
   </div>
@@ -112,134 +112,133 @@ export default {
   },
   data() {
     return {
-      content1: `
-       <g-button type="primary" @click="info">显示普通的提示</g-button>
-
-        methods:{
-            info(){
-               this.$message.info({
-                    content:'这是一条普通的全局提示'
-            })
-          },
+      content1:`
+<g-button type="primary" @click="info">显示普通的提示</g-button>
+methods:{
+      info(){
+         this.$message.info({
+              content:'这是一条普通的全局提示'
+      })
+    },
 }
-      `.replace(/^ {8}/gm, '').trim(),
+`,
       content2: `
-        <g-button @click="info">显示普通的提示</g-button>
-        <g-button @click="success">显示成功的提示</g-button>
-        <g-button @click="warning">显示警告的提示</g-button>
-        <g-button @click="error">显示错误的提示</g-button>
+<g-button @click="info">显示普通的提示</g-button>
+<g-button @click="success">显示成功的提示</g-button>
+<g-button @click="warning">显示警告的提示</g-button>
+<g-button @click="error">显示错误的提示</g-button>
 
-        methods: {
-            info() {
-               this.$message.info({
-                    content: '这是一条普通的全局提示'
-            })
-  },
-            success() {
-               this.$message.success({
-                    content: '这是一条成功的全局提示'
-            })
-  },
-            warning() {
-               this.$message.warning({
-                    content: '这是一条警告的全局提示'
-            })
-  },
-            error() {
-               this.$message.error({
-                    content: '这是一条错误的全局提示'
-            })
-  },
-  },
-      `.replace(/^ {8}/gm, '').trim(),
+methods: {
+    info() {
+       this.$message.info({
+            content: '这是一条普通的全局提示'
+    })
+},
+    success() {
+       this.$message.success({
+            content: '这是一条成功的全局提示'
+    })
+},
+    warning() {
+       this.$message.warning({
+            content: '这是一条警告的全局提示'
+    })
+},
+    error() {
+       this.$message.error({
+            content: '这是一条错误的全局提示'
+    })
+},
+}
+      `,
       content3: `
-        <g-button type="primary" @click="info">显示普通的提示</g-button>
-        <g-button type="success" @click="success">显示成功的提示</g-button>
-        <g-button type="warning" @click="warning">显示警告的提示</g-button>
-        <g-button type="danger" @click="error">显示错误的提示</g-button>
+<g-button type="primary" @click="info">显示普通的提示</g-button>
+<g-button type="success" @click="success">显示成功的提示</g-button>
+<g-button type="warning" @click="warning">显示警告的提示</g-button>
+<g-button type="danger" @click="error">显示错误的提示</g-button>
 
-        methods: {
-            info() {
-               this.$message.info({
-                    background:true,
-                    content: '这是一条普通的全局提示'
-            })
-  },
-            success() {
-               this.$message.success({
-                    background:true,
-                    content: '这是一条成功的全局提示'
-            })
-  },
-            warning() {
-               this.$message.warning({
-                    background:true,
-                    content: '这是一条警告的全局提示'
-            })
-  },
-            error() {
-               this.$message.error({
-                    background:true,
-                    content: '这是一条错误的全局提示'
-            })
-  },
-  },
-      `.replace(/^ {8}/gm, '').trim(),
+methods: {
+    info() {
+       this.$message.info({
+            background:true,
+            content: '这是一条普通的全局提示'
+    })
+},
+    success() {
+       this.$message.success({
+            background:true,
+            content: '这是一条成功的全局提示'
+    })
+},
+    warning() {
+       this.$message.warning({
+            background:true,
+            content: '这是一条警告的全局提示'
+    })
+},
+    error() {
+       this.$message.error({
+            background:true,
+            content: '这是一条错误的全局提示'
+    })
+},
+},
+      `,
       content4: `
-       <g-button @click="info">显示普通的提示</g-button>
+<g-button @click="info">显示普通的提示</g-button>
 
-        methods:{
-            info(){
-               this.$message.info({
-                    content:' 我将会在10秒后消失',
-                    duration:10
-            })
-          },
+methods:{
+    info(){
+       this.$message.info({
+            content:' 我将会在10秒后消失',
+            duration:10
+    })
+  },
 }
-      `.replace(/^ {8}/gm, '').trim(),
+      `,
       content5: `
-        <g-button @click="info1">显示可关闭的提示</g-button>
-        <g-button type="primary" @click="info2">显示可关闭的提示</g-button>
-        <g-button type="success" @click="success">显示可关闭的提示</g-button>
-        <g-button type="warning" @click="warning">显示可关闭的提示</g-button>
-        <g-button type="danger" @click="error">显示可关闭的提示</g-button>
+<g-button @click="info1">显示可关闭的提示</g-button>
+<g-button type="primary" @click="info2">显示可关闭的提示</g-button>
+<g-button type="success" @click="success">显示可关闭的提示</g-button>
+<g-button type="warning" @click="warning">显示可关闭的提示</g-button>
+<g-button type="danger" @click="error">显示可关闭的提示</g-button>
 
-        methods: {
-            info1() {
-               this.$message.info({
-                    autoClose: false,
-                    closable: true,
-                    content: '这是一条可关闭的全局提示'
-            })
-  },
-            info2() {
-               this.$message.info({
-                    autoClose: false,
-                    closable: true,
-                    background: true,
-                    content: '这是一条可关闭的全局提示'
-            })
-  },
-            success() {
-               this.$message.success({
-                    background:true,
-                    content: '这是一条成功的全局提示'
-            })
-  },
-            warning() {
-               this.$message.warning({
-                    background:true,
-                    content: '这是一条警告的全局提示'
-            })
-  },
-            error() {
-               this.$message.error({
-                    background:true,
-                    content: '这是一条错误的全局提示'
-            })
-  },
+methods: {
+    info1() {
+       this.$message.info({
+            autoClose: false,
+            closable: true,
+            content: '这是一条可关闭的全局提示'
+    })
+},
+    info2() {
+       this.$message.info({
+            autoClose: false,
+            closable: true,
+            background: true,
+            content: '这是一条可关闭的全局提示'
+    })
+},
+    success() {
+       this.$message.success({
+            background:true,
+            content: '这是一条成功的全局提示'
+    })
+},
+    warning() {
+       this.$message.warning({
+            background:true,
+            content: '这是一条警告的全局提示'
+    })
+},
+    error() {
+       this.$message.error({
+            background:true,
+            content: '这是一条错误的全局提示'
+    })
+},
 }
-      `.replace(/^ {8}/gm, '').trim(),
+      `,
     }
   },
   methods: {

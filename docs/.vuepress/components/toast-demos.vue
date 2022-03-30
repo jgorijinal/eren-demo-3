@@ -13,7 +13,7 @@
         <g-button @click="$toast('点击弹出提示', {position:'bottom',  autoClose:5})">下方弹出</g-button>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content1 }}</code></pre>
+       {{ content1 }}
       </template>
     </g-demo>
 
@@ -30,7 +30,7 @@
         </div>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content2 }}</code></pre>
+       {{ content2 }}
       </template>
     </g-demo>
 
@@ -47,7 +47,7 @@
         </div>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content3 }}</code></pre>
+        {{ content3 }}
       </template>
     </g-demo>
   </div>
@@ -68,45 +68,43 @@ export  default {
   data(){
     return {
       content1:`
-        <g-button @click="$toast('点击弹出提示')">上方弹出</g-button>
-        <g-button @click="$toast('点击弹出提示', {position:'middle'})">中间弹出</g-button>
-        <g-button @click="$toast('点击弹出提示', {position:'bottom', autoClose:5})">下方弹出</g-button>
-      `.replace(/^ {8}/gm, '').trim(),
+<g-button @click="$toast('点击弹出提示')">上方弹出</g-button>
+<g-button @click="$toast('点击弹出提示', {position:'middle'})">中间弹出</g-button>
+<g-button @click="$toast('点击弹出提示', {position:'bottom', autoClose:5})">下方弹出</g-button>
+      `,
       content2:`
-      <g-button @click="onClickButton">上方弹出</g-button>
+<g-button @click="onClickButton">上方弹出</g-button>
 
 methods: {
-  onClickButton () {
-    this.$toast('你知道我在等你吗？', {
-      closeButton: {
-                text: '知道了',
-                    callback: () => {
-                    console.log('他说知道了')
-                      }
+    onClickButton () {
+        this.$toast('你知道我在等你吗？', {
+        closeButton: {
+              text: '知道了',
+              callback: () => {
+              console.log('他说知道了')
                 }
-          })
-}
+          }
+     })
+  }
 },
-
-      `.replace(/^ {8}/gm, '').trim(),
+      `,
       content3:`
-        <g-button @click="onClickButtonEnableHtml">使用HTML片段</g-button>
+<g-button @click="onClickButtonEnableHtml">使用HTML片段</g-button>
 
 onClickButtonEnableHtml(){
-      this.$toast(
-      '<strong style="color: red">加粗的提示</strong>',{
-                closeButton: {
-                     text: '知道了',
-                     callback: () => {
-                         console.log('他说知道了')
-                     }
-                 },
-                 enableHtml: true
-              })
-         }
+    this.$toast(
+        '<strong style="color: red">加粗的提示</strong>',{
+            closeButton: {
+                 text: '知道了',
+                 callback: () => {
+                    console.log('他说知道了')
+             }
+         },
+         enableHtml: true
+      })
+    }
 }
-
-      `.replace(/^ {8}/gm, '').trim(),
+      `,
     }
   },
   methods: {

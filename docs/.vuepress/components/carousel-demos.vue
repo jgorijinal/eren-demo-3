@@ -51,7 +51,7 @@
         </g-carousel>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content2 }}</code></pre>
+       {{ content2 }}
       </template>
     </g-demo>
 
@@ -79,7 +79,7 @@
         </g-carousel>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content3 }}</code></pre>
+        {{ content3 }}
       </template>
     </g-demo>
 
@@ -107,7 +107,7 @@
         </g-carousel>
       </template>
       <template v-slot:code>
-        <pre><code>{{ content4 }}</code></pre>
+        {{ content4 }}
       </template>
     </g-demo>
   </div>
@@ -129,114 +129,114 @@ export  default {
       selectedCarousel3:'3',
       selectedCarousel4:'4',
       content1:`
-      <g-carousel class="wrapper" :selected.sync="selectedCarousel1">
-          <g-carousel-item name="1">
-            <div class="box" >1</div>
-          </g-carousel-item>
-          <g-carousel-item name="2">
-            <div class="box" >2</div>
-          </g-carousel-item>
-          <g-carousel-item name="3">
-            <div class="box" >3</div>
-          </g-carousel-item>
-          <g-carousel-item name="4">
-            <div class="box" >4</div>
-          </g-carousel-item>
-        </g-carousel>
+<g-carousel class="wrapper" :selected.sync="selectedCarousel1">
+  <g-carousel-item name="1">
+    <div class="box" >1</div>
+  </g-carousel-item>
+  <g-carousel-item name="2">
+    <div class="box" >2</div>
+  </g-carousel-item>
+  <g-carousel-item name="3">
+    <div class="box" >3</div>
+  </g-carousel-item>
+  <g-carousel-item name="4">
+    <div class="box" >4</div>
+  </g-carousel-item>
+</g-carousel>
 
-        <style scoped>
-           .box {
-               width: 100%;
-               height: 300px;
-               display: flex;
-               font-size: 50px;
-               justify-content: center;
-               align-items: center;
-               background: #2c3e50;
-            }
-        </style>
-      `.replace(/^ {8}/gm, '').trim(),
+<style scoped>
+   .box {
+       width: 100%;
+       height: 300px;
+       display: flex;
+       font-size: 50px;
+       justify-content: center;
+       align-items: center;
+       background: #2c3e50;
+    }
+</style>
+      `,
       content2:`
-      <g-carousel class="wrapper" :selected.sync="selectedCarousel2" arrows >
-          <g-carousel-item name="1">
-            <div class="box" >1</div>
-          </g-carousel-item>
-          <g-carousel-item name="2">
-            <div class="box" >2</div>
-          </g-carousel-item>
-          <g-carousel-item name="3">
-            <div class="box">3</div>
-          </g-carousel-item>
-          <g-carousel-item name="4">
-            <div class="box">4</div>
-          </g-carousel-item>
-        </g-carousel>
-        <style scoped>
-           .box {
-               width: 100%;
-               height: 300px;
-               display: flex;
-               font-size: 50px;
-               justify-content: center;
-               align-items: center;
-               background: #2c3e50;
-            }
-        </style>
-      `.replace(/^ {8}/gm, '').trim(),
+<g-carousel class="wrapper" :selected.sync="selectedCarousel2" arrows >
+  <g-carousel-item name="1">
+    <div class="box" >1</div>
+  </g-carousel-item>
+  <g-carousel-item name="2">
+    <div class="box" >2</div>
+  </g-carousel-item>
+  <g-carousel-item name="3">
+    <div class="box">3</div>
+  </g-carousel-item>
+  <g-carousel-item name="4">
+    <div class="box">4</div>
+  </g-carousel-item>
+</g-carousel>
+<style scoped>
+   .box {
+       width: 100%;
+       height: 300px;
+       display: flex;
+       font-size: 50px;
+       justify-content: center;
+       align-items: center;
+       background: #2c3e50;
+    }
+</style>
+      `,
       content3:`
-      <g-carousel class="wrapper" :selected.sync="selectedCarousel3" auto-play :interval="3">
-          <g-carousel-item name="1">
-            <div class="box" >1</div>
-          </g-carousel-item>
-          <g-carousel-item name="2">
-            <div class="box" >2</div>
-          </g-carousel-item>
-          <g-carousel-item name="3">
-            <div class="box" >3</div>
-          </g-carousel-item>
-          <g-carousel-item name="4">
-            <div class="box" >4</div>
-          </g-carousel-item>
-        </g-carousel>
-        <style scoped>
-           .box {
-               width: 100%;
-               height: 300px;
-               display: flex;
-               font-size: 50px;
-               justify-content: center;
-               align-items: center;
-               background: #2c3e50;
-            }
-        </style>
-      `.replace(/^ {8}/gm, '').trim(),
+<g-carousel class="wrapper" :selected.sync="selectedCarousel3" auto-play :interval="3">
+  <g-carousel-item name="1">
+    <div class="box" >1</div>
+  </g-carousel-item>
+  <g-carousel-item name="2">
+    <div class="box" >2</div>
+  </g-carousel-item>
+  <g-carousel-item name="3">
+    <div class="box" >3</div>
+  </g-carousel-item>
+  <g-carousel-item name="4">
+    <div class="box" >4</div>
+  </g-carousel-item>
+</g-carousel>
+<style scoped>
+   .box {
+       width: 100%;
+       height: 300px;
+       display: flex;
+       font-size: 50px;
+       justify-content: center;
+       align-items: center;
+       background: #2c3e50;
+    }
+</style>
+      `,
       content4:`
-      <g-carousel class="wrapper" :selected.sync="selectedSlide3" fade>
-            <g-carousel-item name="1">
-                <div class="box" >1</div>
-            </g-carousel-item>
-            <g-carousel-item name="2">
-                <div class="box" >2</div>
-            </g-carousel-item>
-            <g-carousel-item name="3">
-                <div class="box">3</div>
-            </g-carousel-item>
-            <g-carousel-item name="4">
-                <div class="box">4</div>
-            </g-carousel-item>
-        </g-carousel>
-        <style scoped>
-           .box {
-               width: 100%;
-               height: 300px;
-               display: flex;
-               font-size: 50px;
-               justify-content: center;
-               align-items: center;
-               background: #2c3e50;
-            }
-        </style>
-      `.replace(/^ {8}/gm, '').trim(),
+<g-carousel class="wrapper" :selected.sync="selectedSlide3" fade>
+    <g-carousel-item name="1">
+        <div class="box" >1</div>
+    </g-carousel-item>
+    <g-carousel-item name="2">
+        <div class="box" >2</div>
+    </g-carousel-item>
+    <g-carousel-item name="3">
+        <div class="box">3</div>
+    </g-carousel-item>
+    <g-carousel-item name="4">
+        <div class="box">4</div>
+    </g-carousel-item>
+</g-carousel>
+<style scoped>
+   .box {
+       width: 100%;
+       height: 300px;
+       display: flex;
+       font-size: 50px;
+       justify-content: center;
+       align-items: center;
+       background: #2c3e50;
+    }
+</style>
+      `,
 
     }
   },
