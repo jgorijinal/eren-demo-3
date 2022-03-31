@@ -6,8 +6,9 @@
       </template>
       <template v-slot:description>
         <code>trigger</code>属性用于设置何时触发 Popover，支持两种触发方式: <code>click</code> , <code>hover</code> , 默认是<code>click</code>方式。
-        通过 <code>position</code>属性设置 Popover 弹出方向 , 支持四种方向: <code>left</code> ,<code>right</code> ,<code>top</code>
-        ,<code>bottom</code>。
+        通过 <code>position</code>属性设置 Popover 弹出方向 , 支持12种弹出方向: <code>top-left</code>,<code>top-center</code>,<code>top-right</code>,
+        <code>left-top</code>,<code>left-center</code>,<code>left-bottom</code>,<code>right-top</code>,<code>right-center</code>,<code>right-bottom</code>
+        ,<code>bottom-left</code>,<code>bottom-center</code>,<code>bottom-right</code>。
       </template>
       <template v-slot:component>
         <div class="container">
