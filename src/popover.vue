@@ -67,7 +67,7 @@ export default {
       const {width:width2, height:height2, left:left2, top:top2} = this.$refs.contentWrapper.getBoundingClientRect()
       let x = {
         'top-right': {
-          left: window.scrollX + left-(width2 - width),
+          left: window.scrollX + left- Math.abs(width2 - width),
           top: window.scrollY + top
         },
         'top-center':{
@@ -80,6 +80,14 @@ export default {
         },
         'bottom-left': {
           left: window.scrollX + left,
+          top: window.scrollY + height + top
+        },
+        'bottom-center': {
+          left: window.scrollX + left - Math.abs((width2 - width)/2),
+          top: window.scrollY + height + top
+        },
+        'bottom-right': {
+          left: window.scrollX + left- Math.abs(width2 -width ),
           top: window.scrollY + height + top
         },
         'left-top': {
@@ -106,6 +114,7 @@ export default {
           left: window.scrollX + left + width,
           top: window.scrollY + top -(height2 - height)
         },
+
       }
       this.$refs.contentWrapper.style.top = x[this.position].top + 'px'
       this.$refs.contentWrapper.style.left = x[this.position].left + 'px'
@@ -203,6 +212,24 @@ export default {
 
     &::before {
       left: 10px;
+      bottom: 100%;
+      border-bottom-color: #585e6b;
+    }
+  }
+  &.position-bottom-center {
+    margin-top: 10px;
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 100%;
+      border-bottom-color: #585e6b;
+    }
+  }
+  &.position-bottom-right {
+    margin-top: 10px;
+
+    &::before {
+      right: 10px;
       bottom: 100%;
       border-bottom-color: #585e6b;
     }
