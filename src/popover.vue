@@ -22,9 +22,11 @@ export default {
   props: {
     position: {
       type: String,
-      default: 'top',
+      default: 'top-left',
       validator(value) {
-        return ['left', 'right', 'bottom', 'top'].indexOf(value) >= 0
+        return ['left-center','left-top','left-bottom' , 'right-top'
+          , 'right-center','right-bottom', 'bottom-center','bottom-left' , 'bottom-right'
+          , 'top-left' ,'top-center' ,'top-right' ].indexOf(value) >= 0
       }
     },
     trigger: {
@@ -62,20 +64,29 @@ export default {
     positionContent() {
       document.body.appendChild(this.$refs.contentWrapper)
       const {width, height, left, top} = this.$refs.triggerWrapper.getBoundingClientRect()
+      const {width:width2, height:height2, left:left2, top:top2} = this.$refs.contentWrapper.getBoundingClientRect()
       let x = {
-        top: {
+        'top-right': {
+          left: window.scrollX + left-(width2 - width),
+          top: window.scrollY + top
+        },
+        'top-center':{
+          left: window.scrollX + left - Math.abs(width2/2 - width/2),
+          top: window.scrollY + top
+        },
+        'top-left': {
           left: window.scrollX + left,
           top: window.scrollY + top
         },
-        bottom: {
+        'bottom-left': {
           left: window.scrollX + left,
           top: window.scrollY + height + top
         },
-        left: {
+        'left-top': {
           left: window.scrollX + left,
           top: window.scrollY + top
         },
-        right: {
+        'right-top': {
           left: window.scrollX + left + +width,
           top: window.scrollY + top
         },
@@ -141,7 +152,7 @@ export default {
     position: absolute;
   }
 
-  &.position-top {
+  &.position-top-left {
     transform: translateY(-100%);
     margin-top: -10px;
 
@@ -151,8 +162,27 @@ export default {
       border-top-color: #585e6b;
     }
   }
+  &.position-top-center {
+    transform: translateY(-100%);
+    margin-top: -10px;
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 100%;
+      border-top-color: #585e6b;
+    }
+  }
+  &.position-top-right {
+    transform: translateY(-100%);
+    margin-top: -10px;
+    &::before {
+      right: 10px;
+      top: 100%;
+      border-top-color: #585e6b;
+    }
+  }
 
-  &.position-bottom {
+  &.position-bottom-left {
     margin-top: 10px;
 
     &::before {
@@ -162,7 +192,7 @@ export default {
     }
   }
 
-  &.position-left {
+  &.position-left-top {
     transform: translateX(-100%);
     margin-left: -10px;
 
@@ -173,9 +203,8 @@ export default {
     }
   }
 
-  &.position-right {
+  &.position-right-top {
     margin-left: 10px;
-
     &::before {
       right: 100%;
       top: 5px;

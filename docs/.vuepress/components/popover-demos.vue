@@ -9,25 +9,25 @@
         通过 <code>position</code>属性设置 Popover 弹出方向 , 支持四种方向: <code>left</code> ,<code>right</code> ,<code>top</code> ,<code>bottom</code>。
       </template>
       <template v-slot:component>
-        <g-popover>
-          <g-button>上方弹出</g-button>
+        <g-popover position="top-left">
+          <g-button>上左</g-button>
           <template slot="content">
             弹出内容
           </template>
         </g-popover>
-        <g-popover position="bottom">
+        <g-popover position="bottom-left">
           <g-button>下方弹出</g-button>
           <template slot="content">
             弹出内容
           </template>
         </g-popover>
-        <g-popover position="left">
+        <g-popover position="left-top">
           <g-button>左边弹出</g-button>
           <template slot="content">
             弹出内容
           </template>
         </g-popover>
-        <g-popover position="right">
+        <g-popover position="right-top">
           <g-button>右边弹出</g-button>
           <template slot="content">
             弹出内容
@@ -47,25 +47,25 @@
         把<code>trigger</code> 属性设置为 <code>hover</code>。
       </template>
       <template v-slot:component>
-        <g-popover trigger="hover">
+        <g-popover trigger="hover" position="top-left">
           <g-button>上方弹出</g-button>
           <template slot="content">
             弹出内容
           </template>
         </g-popover>
-        <g-popover position="bottom" trigger="hover">
+        <g-popover position="bottom-left" trigger="hover">
           <g-button>下方弹出</g-button>
           <template slot="content">
             弹出内容
           </template>
         </g-popover>
-        <g-popover position="left" trigger="hover">
+        <g-popover position="left-top" trigger="hover">
           <g-button>左边弹出</g-button>
           <template slot="content">
             弹出内容
           </template>
         </g-popover>
-        <g-popover position="right" trigger="hover">
+        <g-popover position="right-top" trigger="hover">
           <g-button>右边弹出</g-button>
           <template slot="content">
             弹出内容
