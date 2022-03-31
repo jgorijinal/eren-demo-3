@@ -87,8 +87,16 @@ export default {
           top: window.scrollY + top
         },
         'right-top': {
-          left: window.scrollX + left + +width,
+          left: window.scrollX + left + width,
           top: window.scrollY + top
+        },
+        'right-center': {
+          left: window.scrollX + left + width,
+          top: window.scrollY + top - Math.abs(height2/2 - height/2 )
+        },
+        'right-bottom': {
+          left: window.scrollX + left + width,
+          top: window.scrollY + top -(height2 - height)
         },
       }
       this.$refs.contentWrapper.style.top = x[this.position].top + 'px'
@@ -208,6 +216,23 @@ export default {
     &::before {
       right: 100%;
       top: 5px;
+      border-right-color: #585e6b;
+    }
+  }
+  &.position-right-center {
+    margin-left: 10px;
+    &::before {
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-right-color: #585e6b;
+    }
+  }
+  &.position-right-bottom {
+    margin-left: 10px;
+    &::before {
+      right: 100%;
+      bottom: 5px;
       border-right-color: #585e6b;
     }
   }
