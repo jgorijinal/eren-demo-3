@@ -83,8 +83,16 @@ export default {
           top: window.scrollY + height + top
         },
         'left-top': {
-          left: window.scrollX + left,
+          left: window.scrollX + left - width2,
           top: window.scrollY + top
+        },
+        'left-center': {
+          left: window.scrollX + left - width2,
+          top: window.scrollY + top- Math.abs(height2/2 - height/2 )
+        },
+        'left-bottom': {
+          left: window.scrollX + left - width2,
+          top: window.scrollY + top - (height2 - height)
         },
         'right-top': {
           left: window.scrollX + left + width,
@@ -201,7 +209,6 @@ export default {
   }
 
   &.position-left-top {
-    transform: translateX(-100%);
     margin-left: -10px;
 
     &::before {
@@ -210,6 +217,24 @@ export default {
       border-left-color: #585e6b;
     }
   }
+  &.position-left-center {
+    margin-left: -10px;
+    &::before {
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-left-color: #585e6b;
+    }
+  }
+  &.position-left-bottom {
+    margin-left: -10px;
+    &::before {
+      left: 100%;
+      bottom: 5px;
+      border-left-color: #585e6b;
+    }
+  }
+
 
   &.position-right-top {
     margin-left: 10px;
